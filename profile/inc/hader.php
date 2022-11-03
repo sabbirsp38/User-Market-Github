@@ -52,6 +52,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
 <script src="../js/bootstrap.min.js"></script>
 <script src="../js/bootstrap-select.js"></script>
+<script src="/js/script.js"></script>
 <script>
   $(document).ready(function () {
     var mySelect = $('#first-disabled2');
