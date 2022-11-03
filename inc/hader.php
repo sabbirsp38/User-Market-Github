@@ -42,6 +42,8 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
 <script src="js/bootstrap.min.js"></script>
 <script src="js/bootstrap-select.js"></script>
+<script src="js/jquery-3.2.1.min.js"></script>
+<script src="js/jquery-ui.js"></script>
 <script>
   $(document).ready(function () {
     var mySelect = $('#first-disabled2');
@@ -151,12 +153,12 @@ var elem=$('#container ul');
                 Select language
               </button>
               <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                <a class="dropdown-item" href="index.php?lang=en"
+                <a class="dropdown-item" href="?lang=en"
             <?php if($lang == 'en'){?> style="color: #ff9900;"
             <?php } ?>>English</a><br>
                
                 <a class="dropdown-item"
-            href="index.php?lang=de" <?php if($lang == 'de'){?>
+            href="?lang=de" <?php if($lang == 'de'){?>
             style="color: #ff9900;" <?php } ?>>Deutsche</a>
               </div>
             </div>

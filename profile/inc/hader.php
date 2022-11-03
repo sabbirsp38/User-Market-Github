@@ -12,7 +12,15 @@ $db = new Database();
 $fm = new Formet();
 $uni_id = $_SESSION['uni_id'];
 $con = new mysqli('localhost', 'root', '', 'usermarket');
- ?>
+ 
+
+ // include language configuration file based on selected language
+$lang = "en";
+if (isset($_GET['lang'])) {
+    $lang = $_GET['lang'];
+}
+require_once ("../inc/translet/lang." . $lang . ".php");
+?>
 
 <!DOCTYPE html>
 <html>
@@ -153,12 +161,12 @@ var elem=$('#container ul');
                 Select language
               </button>
               <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                <a class="dropdown-item" href="index.php?lang=en"
+                <a class="dropdown-item" href="?lang=en"
             <?php if($lang == 'en'){?> style="color: #ff9900;"
             <?php } ?>>English</a><br>
                
                 <a class="dropdown-item"
-            href="index.php?lang=de" <?php if($lang == 'de'){?>
+            href="?lang=de" <?php if($lang == 'de'){?>
             style="color: #ff9900;" <?php } ?>>Deutsche</a>
               </div>
             </div>

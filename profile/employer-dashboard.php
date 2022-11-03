@@ -47,8 +47,12 @@ if (isset($_GET['$uni_id'])) {
                   <div class="user-statistic">
                     <i data-feather="command"></i>
                    <?php 
-                       $sql = $con->query("SELECT id FROM job WHERE profile_uid='$uni_id'");
-                         for ($i=0; $i < $sql->num_rows ; $i++) { 
+                   $get_drow='';
+                       $sql = $con->query("SELECT id FROM adds WHERE uni_id='$uni_id'");
+                       if (!empty($sql) && $sql->num_rows > 0)
+                         $get_drow=$sql->num_rows;
+
+                         for ($i=0; $i < $get_drow; $i++) { 
                            $data = $sql->fetch_array();
                            $ii++; }  ?>
                     <span>Total Job Posted</span>
@@ -82,31 +86,31 @@ if (isset($_GET['$uni_id'])) {
                        <?php 
                               if (isset($_GET['delid'])) {
                                 $did = $_GET['delid'];
-                                $query = "DELETE FROM job WHERE id='$did'";
+                                $query = "DELETE FROM adds WHERE id='$did'";
                                  $db-> delete($query);
                               }
                
                           ?> 
                       <?php
-                            $query = "select * from job WHERE profile_uid='$uni_id' order by id desc";
+                            $query = "select * from adds WHERE uni_id='$uni_id' order by id desc";
                             $post = $db->select($query);
                             if ($post) {
                               while ($result= $post -> fetch_assoc()) {
                         ?>
                       <tr class="job-items">
                         <td class="title">
-                          <h5><a href="#"><?php echo $result['title']; ?></a></h5>
+                          <h5><a href="#"><?php echo $result['P_title']; ?></a></h5>
                           
                         </td>
-                        <td class="deadline"><?php echo $result['dead_line']; ?></td>
+                        <td class="deadline"><?php echo $result['P_catagory']; ?></td>
                         <td class="status active">Active</td>
                         <td class="action">
                           <a href="../job-details.php? $id=<?php echo $result['id']; ?>" class="preview" title="Preview"><i data-feather="eye"></i></a>
                           <a href="editjob.php? $id=<?php echo $result['id']; ?>" class="edit" title="Edit"><i data-feather="edit"></i></a>
                           <a href="?delid=<?php echo $result['id']; ?> ?>" class="remove" title="Delete"><i data-feather="trash-2"></i></a>
                         </td>
-                        <td class="application"><a href="job-application.php? $job_uid=<?php echo $result['job_uid']; ?>">View Application(s)</a></td>
-                        <td class="application"><a href="selected-application.php? $job_uid=<?php echo $result['job_uid']; ?>">Selected  Peoples</a></td>
+                        <td class="application"><a href="job-application.php? $uni_id=<?php echo $result['uni_id']; ?>">View Application(s)</a></td>
+                        <td class="application"><a href="selected-application.php? $uni_id=<?php echo $result['uni_id']; ?>">Selected  Peoples</a></td>
                       </tr>
                       </tr>
                        

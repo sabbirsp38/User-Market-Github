@@ -12,6 +12,9 @@
 		$email = $con->real_escape_string($_POST['email']);
 		$password = $con->real_escape_string($_POST['password']);
 		$cPassword = $con->real_escape_string($_POST['cPassword']);
+		$city = $con->real_escape_string($_POST['city']);
+		$county = $con->real_escape_string($_POST['county']);
+		$zip_code = $con->real_escape_string($_POST['zip_code']);
 		//$uni_id = $con->real_escape_string($_POST['uni_id']);
         
         
@@ -27,8 +30,8 @@
                   
 				$hashedPassword = $password;
                 
-				$con->query("INSERT INTO users (name,email,password,uni_id)
-					VALUES ('$name', '$email', '$hashedPassword', '$uni_id');
+				$con->query("INSERT INTO users (name,email,password,uni_id,city,county,zip_code)
+					VALUES ('$name', '$email', '$hashedPassword', '$uni_id', '$city', '$county', '$zip_code');
 				");
                    header("location: profile/index.php");
 
@@ -63,23 +66,13 @@
 					<input class="form-control" name="email" type="email" placeholder="Email..."><br>
 					<input class="form-control" name="password" type="password" placeholder="Password..."><br>
 					<input class="form-control" name="cPassword" type="password" placeholder="Confirm Password..."><br>
+					<input class="form-control" name="city" type="text" placeholder="City"><br>
+					<input class="form-control" name="zip_code" type="text" placeholder="zip code"><br>
+					<input class="form-control" name="county" type="text" placeholder="county"><br>
 					
 					
 
-               <div class="card-body">
-						<div class="form-group">
-							<label for="autocomplete"> Location/City/Address </label>
-							<input type="text" name="autocomplete" id="autocomplete" class="form-control" placeholder="Select Location">
-						</div>
-						<div class="form-group" id="lat_area">
-							<label for="latitude"> Latitude </label>
-							<input type="text" name="latitude" id="latitude" class="form-control">
-						</div>
-						<div class="form-group" id="long_area">
-							<label for="latitude"> Longitude </label>
-							<input type="text" name="longitude" id="longitude" class="form-control">
-						</div>
-					</div>
+              
 
 <input class="loginbut" type="submit" name="submit" value="Register">
 
