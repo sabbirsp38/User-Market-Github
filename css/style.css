@@ -4816,3 +4816,10 @@ label {
     padding: 10px;
     border-radius: 10px;
 }
+
+.padding-top-70{
+	padding-top: 70px;
+}
+.padding-bottom-70{
+	padding-bottom: 70px;
+}

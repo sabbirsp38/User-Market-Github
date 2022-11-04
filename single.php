@@ -8,28 +8,50 @@
 	  </div>
 	</div>
 	<!--single-page-->
+
+	      <?php
+
+          if (!isset($_GET['$id']) || $_GET['$id']==NULL  ) {
+            header("Location: 404.php") ;
+           
+          }else{
+             $id= $_GET['$id'];
+          }
+
+        ?>
+  <?php
+
+                      $query = "select * from adds where id= $id ";
+                      $post = $db->select($query);
+                      $result= $post -> fetch_assoc()
+                        ?>
+
+
 	<div class="single-page main-grid-border">
 		<div class="container">
-			<ol class="breadcrumb" style="margin-bottom: 5px;">
+			<!-- <ol class="breadcrumb" style="margin-bottom: 5px;">
 				<li><a href="index.html">Home</a></li>
 				<li><a href="all-classifieds.html">All Ads</a></li>
 				<li class="active"><a href="mobiles.html">Mobiles</a></li>
 				<li class="active">Mobile Phone</li>
-			</ol>
+			</ol> -->
 			<div class="product-desc">
 				<div class="col-md-7 product-view">
-					<h2>Lorem Ipsum is simply dummy text of the printing and typesetting industry</h2>
-					<p> <i class="glyphicon glyphicon-map-marker"></i><a href="#">state</a>, <a href="#">city</a>| Added at 06:55 pm, Ad ID: 987654321</p>
+					<h2><?php echo $result['P_title']; ?></h2>
+					<p> <i class="glyphicon glyphicon-map-marker"></i><span><?php echo $result['city']; ?></span>, <span><?php echo $result['county']; ?></span>| Added at <?php echo $result['time']; ?>, Ad ID: <?php echo $result['id']; ?></p>
 					<div class="flexslider">
 						<ul class="slides">
-							<li data-thumb="images/ss1.jpg">
-								<img src="images/ss1.jpg" />
+							<li data-thumb="uploads/<?php echo $result['P_imag1']; ?>">
+								<img src="uploads/<?php echo $result['P_imag1']; ?>" />
 							</li>
-							<li data-thumb="images/ss2.jpg">
-								<img src="images/ss2.jpg" />
+							<li data-thumb="uploads/<?php echo $result['P_imag2']; ?>">
+								<img src="uploads/<?php echo $result['P_imag2']; ?>" />
 							</li>
-							<li data-thumb="images/ss3.jpg">
-								<img src="images/ss3.jpg" />
+							<li data-thumb="uploads/<?php echo $result['P_imag3']; ?>">
+								<img src="uploads/<?php echo $result['P_imag3']; ?>" />
+							</li>
+							<li data-thumb="uploads/<?php echo $result['P_imag4']; ?>">
+								<img src="uploads/<?php echo $result['P_imag4']; ?>" />
 							</li>
 						</ul>
 					</div>
@@ -48,10 +70,7 @@
 					</script>
 					<!-- //FlexSlider -->
 					<div class="product-details">
-						<h4>Brand : <a href="#">Company name</a></h4>
-						<h4>Views : <strong>150</strong></h4>
-						<p><strong>Display </strong>: 1.5 inch HD LCD Touch Screen</p>
-						<p><strong>Summary</strong> : It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English.</p>
+						<?php echo $result['p_decription']; ?>
 					
 					</div>
 				</div>
@@ -59,23 +78,23 @@
 					<div class="item-price">
 						<div class="product-price">
 							<p class="p-price">Price</p>
-							<h3 class="rate">$ 259</h3>
+							<h3 class="rate">$ <?php echo $result['p_price']; ?></h3>
 							<div class="clearfix"></div>
 						</div>
 						<div class="condition">
 							<p class="p-price">Condition</p>
-							<h4>Good</h4>
+							<h4><?php echo $result['p_condition']; ?></h4>
 							<div class="clearfix"></div>
 						</div>
 						<div class="itemtype">
 							<p class="p-price">Item Type</p>
-							<h4>Phones</h4>
+							<h4><?php echo $result['P_item_type']; ?></h4>
 							<div class="clearfix"></div>
 						</div>
 					</div>
 					<div class="interested text-center">
 						<h4>Interested in this Ad?<small> Contact the Seller!</small></h4>
-						<p><i class="glyphicon glyphicon-earphone"></i>00-85-9875462655</p>
+						<p><i class="glyphicon glyphicon-earphone"></i><?php echo $result['p_contact_number']; ?></p>
 					</div>
 						<div class="tips">
 						<h4>Safety Tips for Buyers</h4>

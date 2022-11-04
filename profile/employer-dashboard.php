@@ -15,21 +15,13 @@ if (isset($_GET['$uni_id'])) {
         <div class="row">
           <div class="col-md-6">
             <div class="breadcrumb-area">
-              <h1>Employer Dashboard</h1>
-              <nav aria-label="breadcrumb">
-                <ol class="breadcrumb">
-                  <li class="breadcrumb-item"><a href="#">Home</a></li>
-                  <li class="breadcrumb-item active" aria-current="page">Employer Dashboard</li>
-                </ol>
-              </nav>
+              <h1>User Dashboard</h1>
+              
             </div>
           </div>
           <div class="col-md-6">
             <div class="breadcrumb-form">
-              <form action="#">
-                <input type="text" placeholder="Enter Keywords">
-                <button><i data-feather="search"></i></button>
-              </form>
+              
             </div>
           </div>
         </div>
@@ -67,19 +59,19 @@ if (isset($_GET['$uni_id'])) {
       </div>
     </div>
 
-<center><h3>My Job</h3></center>
+<center><h3>Your Adds</h3></center>
 
               <div class="dashboard-content-wrapper container">
                 <div class="manage-job-container">
                   <table class="table">
                     <thead>
                       <tr>
-                        <th>Job Title</th>
-                        <th>Deadline</th>
-                        <th>Status</th>
-                        <th class="action">Action</th>
-                        <th>Applications</th>
-                         <th>Selected  Peoples</th>
+                        <th>Adds Title</th>
+                        <th>Price</th>
+                        <th>Contact Number</th>
+                        <th>View Adds</th>
+                        <th class="action">Edit Adds</th>
+                        <th>Delete Adds</th>
                       </tr>
                     </thead>
                     <tbody>
@@ -102,15 +94,20 @@ if (isset($_GET['$uni_id'])) {
                           <h5><a href="#"><?php echo $result['P_title']; ?></a></h5>
                           
                         </td>
-                        <td class="deadline"><?php echo $result['P_catagory']; ?></td>
-                        <td class="status active">Active</td>
+                        <td class=""><?php echo $result['p_price']; ?></td>
+                        <td class="status active"><?php echo $result['p_contact_number']; ?></td>
                         <td class="action">
-                          <a href="../job-details.php? $id=<?php echo $result['id']; ?>" class="preview" title="Preview"><i data-feather="eye"></i></a>
-                          <a href="editjob.php? $id=<?php echo $result['id']; ?>" class="edit" title="Edit"><i data-feather="edit"></i></a>
-                          <a href="?delid=<?php echo $result['id']; ?> ?>" class="remove" title="Delete"><i data-feather="trash-2"></i></a>
+                          <a class="btn btn-success" href="../single.php? $id=<?php echo $result['id']; ?>" title="Preview">Preview</a>
+                          
                         </td>
-                        <td class="application"><a href="job-application.php? $uni_id=<?php echo $result['uni_id']; ?>">View Application(s)</a></td>
-                        <td class="application"><a href="selected-application.php? $uni_id=<?php echo $result['uni_id']; ?>">Selected  Peoples</a></td>
+                        <td class="application">
+                          <a class="btn btn-warning" href="edit-adds.php? $id=<?php echo $result['id']; ?>"  title="Edit">Edit Adds</a>
+                         
+
+                        </td>
+                        <td class="application"> 
+                          <a class="btn btn-danger" href="?delid=<?php echo $result['id']; ?> ?>" >Delet Adds</a>
+                        </td>
                       </tr>
                       </tr>
                        
