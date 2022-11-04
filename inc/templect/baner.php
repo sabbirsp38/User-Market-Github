@@ -1,7 +1,53 @@
-<div class="main-banner banner text-center">
+
+<?php
+$cat_id="";
+
+if (isset($cat_id)) {
+
+  $cat_id= 3;
+
+  $query = "select * from category where cat_id= $cat_id";
+  $post = $db->select($query);
+  if ($post) {
+  $result= $post -> fetch_assoc(); ?>
+
+  <div class="main-banner banner text-center">
 	  <div class="container">    
-			<h1>Sell or Advertise   <span class="segment-heading">    anything online </span> with Resale</h1>
-			<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry</p>
-			<a href="profile/post-ad.php">Post Free Ad</a>
+			<h1><?php echo $result[$lang.'_banner_title']; ?></h1>
+			<p><?php echo $result[$lang.'_banner_dec']; ?></p>
+			<a href="<?php echo $result['button_url']; ?>"><?php echo $result[$lang.'_botton_text']; ?></a>
 	  </div>
 	</div>
+
+
+<?php 
+
+ } 
+
+
+
+
+  
+}else{
+ 
+
+  $query = "select * from category where cat_id= $cat_id";
+  $post = $db->select($query);
+  if ($post) {
+  $result= $post -> fetch_assoc(); ?>
+
+  <div class="main-banner banner text-center">
+	  <div class="container">    
+			<h1><?php echo $result[$lang.'_banner_title']; ?></h1>
+			<p><?php echo $result[$lang.'_banner_dec']; ?></p>
+			<a href="<?php echo $result['button_url']; ?>"><?php echo $result[$lang.'_botton_text']; ?></a>
+	  </div>
+	</div>
+
+
+<?php 
+
+ } } 
+
+
+?>

@@ -2,7 +2,13 @@
 
 
  include 'inc/hader.php'; 
- require_once ("inc/templect/baner.php")
+
+
+
+  require_once ("inc/templect/baner.php");
+
+
+
 
  ?>
 		<!-- content-starts-here -->

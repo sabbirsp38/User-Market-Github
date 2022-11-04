@@ -12,6 +12,7 @@ require_once ("./inc/translet/lang." . $lang . ".php");
 <?php 
  $db = new Database();
  $fm = new Formet();
+
  ?>
 
 
