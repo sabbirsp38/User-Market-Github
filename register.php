@@ -46,10 +46,15 @@
 <!doctype html>
 <html lang="en">
 <?php include 'inc/hader.php'; ?>
+
+
+
+
+
+
+
 <body>
-	<section id="particles-js" ></section>
-    <script type="text/javascript" src="js/particles.js"></script>
-       <script type="text/javascript" src="js/app.js"></script>
+	
 	<div class="container" style="margin:200px;">
 		<div class="row justify-content-center">
 			<div class="col-md-6 col-md-offset-3" align="center">
@@ -66,42 +71,31 @@
 					<input class="form-control" name="email" type="email" placeholder="Email..."><br>
 					<input class="form-control" name="password" type="password" placeholder="Password..."><br>
 					<input class="form-control" name="cPassword" type="password" placeholder="Confirm Password..."><br>
-					<input class="form-control" name="city" type="text" placeholder="City"><br>
-					<input class="form-control" name="zip_code" type="text" placeholder="zip code"><br>
-					<input class="form-control" name="county" type="text" placeholder="county"><br>
-					
+					<div class="autocomplete">
+					    <input id="CityInput" class="form-control" name="city" type="text" placeholder="City"><br>
+					</div>
+					<div class="autocomplete">
+					    <input id="zip_codeInput" class="form-control" name="zip_code" type="text" placeholder="zip code"><br>
+					</div>
+					<div class="autocomplete">
+					    <input id="countyInput" class="form-control" name="county" type="text" placeholder="county"><br>
+					</div>
+					<input class="loginbut" type="submit" name="submit" value="Register">
+
+            </form>
+
+          </div>
+       </div>
+   </div>
 					
 
               
 
-<input class="loginbut" type="submit" name="submit" value="Register">
 
 
 
-
-
-
-   <script src="https://maps.google.com/maps/api/js?key=AIzaSyDxTV3a6oL6vAaRookXxpiJhynuUpSccjY&libraries=places&callback=initAutocomplete" type="text/javascript"></script>
-
-   <script type="text/javascript">
-   	{{-- javascript code --}}
-$(document).ready(function() {
-$("#lat_area").addClass("d-none");
-$("#long_area").addClass("d-none");
-});
-google.maps.event.addDomListener(window, 'load', initialize);
-function initialize() {
-var input = document.getElementById('autocomplete');
-var autocomplete = new google.maps.places.Autocomplete(input);
-autocomplete.addListener('place_changed', function() {
-var place = autocomplete.getPlace();
-$('#latitude').val(place.geometry['location'].lat());
-$('#longitude').val(place.geometry['location'].lng());
-// --------- show lat and long ---------------
-$("#lat_area").removeClass("d-none");
-$("#long_area").removeClass("d-none");
-});
-}
-   </script>
+<?php include 'inc/auto-part/city.php'; ?>
+<?php include 'inc/auto-part/zip_code.php'; ?>
+<?php include 'inc/auto-part/county.php'; ?>
 
 <?php include 'inc/foter.php'; ?>
