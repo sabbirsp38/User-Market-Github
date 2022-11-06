@@ -52,15 +52,54 @@
 					<div class="clearfix"></div>
 
 					<label>Select Category <span>*</span></label>
-					<select class="" name="P_catagory">
+					<select class="" name="P_catagory" onchange="check(this.value)">
 					  <option>Select Category</option>
 					  <?php
                              $query = "select * from category";
                             $post = $db->select($query);
                             if ($post) {
-                              while ($result= $post -> fetch_assoc()) {
+                              while ($result= $post -> fetch_assoc()) 
+                              {
+                              $gat_cat= $result['cat_id'];
+
+
                         ?>
-					  <option value="<?php echo $result['id']; ?>"><?php echo $result[$lang.'_title']; ?></option>
+					  <option  value="<?php echo $result['cat_id']; ?>"><?php echo $result[$lang.'_title']; ?></option>
+
+					<?php }}?>
+					</select>
+					<div class="clearfix"></div>
+           
+          <script>
+ function check(str){
+var javavar = document.writeln(str);
+return;
+
+<?php 
+$phpvar='"+ javavar +"'; 
+?>
+
+}
+</script>
+
+
+
+					<label>Select Sub Category  <span>*</span></label>
+					<select class="" name="P_catagory">
+					  <option>Select Sub Category</option>
+					  <?php
+                          
+                         
+                             $query2 = "select * from sub_catagory where parent_cat = $gat_cat";
+                            $post2 = $db->select($query2);
+                            if ($post2) {
+                              while ($result2= $post2 -> fetch_assoc()) {
+                        ?>
+					  <option value="<?php echo $result2['id']; ?>"><?php //echo $result2[$lang.'_name'];  
+            echo $phpvar;
+
+
+					?></option>
 
 					<?php }}?>
 					</select>

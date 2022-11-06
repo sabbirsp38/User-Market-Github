@@ -10,7 +10,7 @@
 
 
 					<div class="col-md-2 focus-grid">
-						<a href="categories.php#parentVerticalTab2">
+						<a href="categorie.php? $id=<?php echo $result['cat_id']; ?>">
 							<div class="focus-border">
 								<div class="focus-layout">
 									<div class="focus-image">

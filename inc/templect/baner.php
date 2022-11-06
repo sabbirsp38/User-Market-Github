@@ -1,12 +1,12 @@
 
 <?php
-$cat_id="";
+$id="";
 
-if (isset($cat_id)) {
+if (isset($id)) {
 
-  $cat_id= 3;
+  $id= 3;
 
-  $query = "select * from category where cat_id= $cat_id";
+  $query = "select * from category where cat_id= $id";
   $post = $db->select($query);
   if ($post) {
   $result= $post -> fetch_assoc(); ?>
