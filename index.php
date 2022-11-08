@@ -24,27 +24,56 @@
 					<h2>Trending Ads</h2>
 							<ul id="flexiselDemo3">
 								<li>
+
+                    <?php
+                          $query = "SELECT * FROM adds
+ORDER BY RAND()
+LIMIT 4;";
+                          $post = $db->select($query);
+                          if ($post) {
+                            while ($result= $post -> fetch_assoc()) {
+                            ?>
 									<div class="col-md-3 biseller-column">
-										<a href="single.php">
-											<img src="images/p1.jpg"/>
-											<span class="price">&#36; 450</span>
+										<a href="single.php? $id=<?php echo $result['id']; ?>">
+											<img src="uploads/<?php echo $result['P_imag1']; ?>"/>
+											<span class="price">&#36; <?php echo $result['p_price']; ?></span>
 										</a> 
 										<div class="ad-info">
-											<h5>There are many variations of passages</h5>
-											<span>1 hour ago</span>
+											<h5><?php echo $result['P_title']; ?></h5>
+											<span><?php echo $result['time']; ?></span>
 										</div>
 									</div>
+
+                            <?php }} ?>
+
 									
+									
+								</li>
+								<li>
+
+                    <?php
+                          $query = "SELECT * FROM adds
+ORDER BY RAND()
+LIMIT 4;";
+                          $post = $db->select($query);
+                          if ($post) {
+                            while ($result= $post -> fetch_assoc()) {
+                            ?>
 									<div class="col-md-3 biseller-column">
-										<a href="single.php">
-											<img src="images/p12.jpg"/>
-											<span class="price">&#36; 899</span>
+										<a href="single.php? $id=<?php echo $result['id']; ?>">
+											<img src="uploads/<?php echo $result['P_imag1']; ?>"/>
+											<span class="price">&#36; <?php echo $result['p_price']; ?></span>
 										</a> 
 										<div class="ad-info">
-											<h5>There are many variations of passages</h5>
-											<span>1 hour ago</span>
+											<h5><?php echo $result['P_title']; ?></h5>
+											<span><?php echo $result['time']; ?></span>
 										</div>
 									</div>
+
+                            <?php }} ?>
+
+									
+									
 								</li>
 						</ul>
 					<script type="text/javascript">

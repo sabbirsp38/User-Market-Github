@@ -37,7 +37,7 @@ $fm = new Formet();
 				        Session::set("email", $value['email']);
 				        Session::set("userId", $value['id']);
 				        $_SESSION['uni_id'] = $data['uni_id'];
-	                    header("Location:employer-dashboard.php");
+	                    header("Location:user-dashboard.php");
                     
                 } else
 	                $msg = "Please check your inputs!";
@@ -51,23 +51,34 @@ $fm = new Formet();
 <?php include 'inc/hader2.php' ?>
 
 	
-	<div class="container bodydiv" >
-		<div class="row justify-content-center">
-			<div class="col-md-6 col-md-offset-3" align="center">
-				<center><h3 class="colrtext">Welcome To Job Bord</h3></center>
-                 <center><p class="colrtext">New on this Platfrom <a href="../register.php">become a contributor</a></p></center>
-				
 
-				<?php if ($msg != "") echo $msg . "<br><br>" ?>
-
-				<form method="post" action="index.php">
-					<input class="form-control" name="email" type="email" placeholder="Email..."><br>
-					<input class="form-control" name="password" type="password" placeholder="Password..."><br>
-					<input class=" loginbut" type="submit" name="submit" value="Log In">
-				</form>
-
+		 <section>
+			<div id="page-wrapper" class="sign-in-wrapper">
+				<div class="graphs">
+					<div class="sign-in-form">
+						<div class="sign-in-form-top">
+							<h1>Log in</h1>
+						</div>
+						<div class="signin">
+							<div class="signin-rit">
+								<?php if ($msg != "") echo $msg . "<br><br>" ?>
+							</div>
+							<form method="post" action="index.php">
+								<input class="form-control" name="email" type="email" placeholder="Email..."><br>
+								<input class="form-control" name="password" type="password" placeholder="Password..."><br>
+								<input class=" loginbut" type="submit" name="submit" value="Log In">
+							</form>	 
+						</div>
+						<div class="new_people">
+							<h2>For New People</h2>
+							<p>Having hands on experience in creating innovative designs,I do offer design 
+								solutions which harness.</p>
+							<a href="../register.php">Register Now!</a>
+						</div>
+					</div>
+				</div>
 			</div>
-		</div>
-	</div>
+		
+	</section>
 
 <?php include 'inc/foter.php'; ?>

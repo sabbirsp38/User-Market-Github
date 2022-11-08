@@ -1,3 +1,17 @@
+
+
+<?php
+    $servername = 'localhost';
+    $username   = 'root'; // Username
+    $password   = ''; // Password
+    $dbname     = "usermarket";
+    $conn       = mysqli_connect($servername,$username,$password,"$dbname");
+    
+    if(!$conn){
+        die('Could not Connect MySql Server:' .mysql_error());
+    }
+?>
+
 <?php 
  include '../lib/Session.php';
  Session::checkSession();
@@ -180,7 +194,8 @@ if (isset($_GET['action']) && $_GET['action']=="logout" ) {
     Session::destroy();
   }
  ?>
-                      <li><a href="?action=logout"><span class="ti-power-off"></span>Log Out</a></li>
+                      <li><a class="btn btn-secondary logout-but" href="post-ad.php">Post Ads</a></li>
+                      <li><a class="btn btn-secondary logout-but" href="?action=logout"><span class="ti-power-off"></span>Log Out</a></li>
         </ul>
       
 

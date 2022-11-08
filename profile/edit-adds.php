@@ -61,20 +61,36 @@
 					<input  name="P_title" type="text" class="phone" value="<?php echo $result['P_title']; ?>">
 					<div class="clearfix"></div>
 
-					<label>Select Category <span>*</span></label>
-					<select class="" name="P_catagory">
-					  <option value="">Select Category</option>
-					  <?php
-                             $query = "select * from category";
-                            $post = $db->select($query);
-                            if ($post) {
-                              while ($result= $post -> fetch_assoc()) {
-                        ?>
-					  <option value="<?php echo $result['id']; ?>"><?php echo $result[$lang.'_title']; ?></option>
 
-					<?php }}?>
-					</select>
-					<div class="clearfix"></div>
+					
+
+
+                                <div class="form-group">
+                                    <label for="CATEGORY-DROPDOWN">Category</label>
+                                    <select class="form-control" id="category-dropdown" name="P_catagory">
+                                        <option value="">Select Category</option>
+                                        <?php
+                                        $result = mysqli_query($conn, "SELECT * FROM category ");
+                                        while ($row = mysqli_fetch_array($result)) {
+                                            ?>
+                                            <option value="<?php echo $row['cat_id']; echo $lang; ?>"><?php echo $row[$lang."_title"]; ?></option>
+                                            <?php
+                                        }
+                                        ?>
+                                    </select>
+                                </div>
+                                <div class="form-group">
+                                    <label for="SUBCATEGORY">Sub Category</label>
+                                    <select class="form-control" id="sub-category-dropdown" name="p_sub_catagory">
+                                        <option value="">Select Sub Category</option>
+                                    </select>
+                                </div>
+
+
+
+
+
+
 					  <?php
 
           if (!isset($_GET['$id']) || $_GET['$id']==NULL  ) {
@@ -159,4 +175,26 @@
 	</div>
 	<!-- // Submit Ad -->
 
+        <script src="https://code.jquery.com/jquery-3.5.1.min.js"  crossorigin="anonymous"></script>
+        <script>
+            $(document).ready(function() {
+                $('#category-dropdown').on('change', function() {
+                    var category_id = this.value;
+                    var lang = "<?php echo $lang;  ?>";
+                    
+                    $.ajax({
+                        url: "get-subcat.php",
+                        type: "POST",
+                        data: {
+                            category_id: category_id,lang:lang
+                        },
+                        cache: false,
+                        success: function(result) {
+                            $("#sub-category-dropdown").html(result);
+                        }
+                    });
+
+                });
+            });
+        </script>
 <?php include 'inc/foter.php'; ?> 

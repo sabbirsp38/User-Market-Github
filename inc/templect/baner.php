@@ -4,7 +4,7 @@ $id="";
 
 if (isset($id)) {
 
-  $id= 3;
+  $id= 43050;
 
   $query = "select * from category where cat_id= $id";
   $post = $db->select($query);

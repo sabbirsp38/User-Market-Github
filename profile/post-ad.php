@@ -1,20 +1,20 @@
 <?php include 'inc/hader.php'; ?> 
 
+<?php include '../inc/templect/baner.php'; ?> 
 
 
-	<div class="banner text-center">
-	  <div class="container">    
-			<h1>Sell or Advertise   <span class="segment-heading">    anything online </span> with Resale</h1>
-			<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry</p>
-			<a href="post-ad.html">Post Free Ad</a>
-	  </div>
-	</div>
-	<!-- Submit Ad -->
-	<div class="submit-ad main-grid-border">
-		<div class="container">
-			<h2 class="head">Post an Ad</h2>
-			<div class="post-ad-form">
-				<form action="dbconncet_addspoast.php" class="job-post-form" method="post"  data-provide="validation" data-disable="false" method="post" autocomplete="off" enctype="multipart/form-data" >
+
+<!-- Submit Ad -->
+    <div class="submit-ad main-grid-border">
+        <div class="container">
+            <h2 class="head">Post an Ad</h2>
+            <div class="post-ad-form">
+                <form action="dbconncet_addspoast.php" class="job-post-form" method="post"  data-provide="validation" data-disable="false" method="post" autocomplete="off" enctype="multipart/form-data" >
+
+
+
+
+
 
 
 
@@ -47,131 +47,129 @@
 
 
 
-					<label>Ad Title <span>*</span></label>
-					<input name="P_title" type="text" class="phone" placeholder="">
-					<div class="clearfix"></div>
-
-					<label>Select Category <span>*</span></label>
-					<select class="" name="P_catagory" onchange="check(this.value)">
-					  <option>Select Category</option>
-					  <?php
-                             $query = "select * from category";
-                            $post = $db->select($query);
-                            if ($post) {
-                              while ($result= $post -> fetch_assoc()) 
-                              {
-                              $gat_cat= $result['cat_id'];
+                    <label>Ad Title <span>*</span></label>
+                    <input name="P_title" type="text" class="phone" placeholder="">
+                    <div class="clearfix"></div>
+                    
 
 
-                        ?>
-					  <option  value="<?php echo $result['cat_id']; ?>"><?php echo $result[$lang.'_title']; ?></option>
-
-					<?php }}?>
-					</select>
-					<div class="clearfix"></div>
-           
-          <script>
- function check(str){
-var javavar = document.writeln(str);
-return;
-
-<?php 
-$phpvar='"+ javavar +"'; 
-?>
-
-}
-</script>
+                                <div class="form-group">
+                                    <label for="CATEGORY-DROPDOWN">Category</label>
+                                    <select class="form-control" id="category-dropdown" name="P_catagory">
+                                        <option value="">Select Category</option>
+                                        <?php
+                                        $result = mysqli_query($conn, "SELECT * FROM category ");
+                                        while ($row = mysqli_fetch_array($result)) {
+                                            ?>
+                                            <option value="<?php echo $row['cat_id']; echo $lang; ?>"><?php echo $row[$lang."_title"]; ?></option>
+                                            <?php
+                                        }
+                                        ?>
+                                    </select>
+                                </div>
+                                <div class="form-group">
+                                    <label for="SUBCATEGORY">Sub Category</label>
+                                    <select class="form-control" id="sub-category-dropdown" name="p_sub_catagory">
+                                        <option value="">Select Sub Category</option>
+                                    </select>
+                                </div>
 
 
 
-					<label>Select Sub Category  <span>*</span></label>
-					<select class="" name="P_catagory">
-					  <option>Select Sub Category</option>
-					  <?php
-                          
-                         
-                             $query2 = "select * from sub_catagory where parent_cat = $gat_cat";
-                            $post2 = $db->select($query2);
-                            if ($post2) {
-                              while ($result2= $post2 -> fetch_assoc()) {
-                        ?>
-					  <option value="<?php echo $result2['id']; ?>"><?php //echo $result2[$lang.'_name'];  
-            echo $phpvar;
+                    <label>Price <span></span></label>
+                    <input name="p_price" type="text" class="phone" placeholder="">
+                    <div class="clearfix"></div>
+
+                    <label>Condition <span></span></label>
+                    <input name="p_condition" type="text" class="phone" placeholder="">
+                    <div class="clearfix"></div>
 
 
-					?></option>
-
-					<?php }}?>
-					</select>
-					<div class="clearfix"></div>
-					
-
-					<label>Price <span></span></label>
-					<input name="p_price" type="text" class="phone" placeholder="">
-					<div class="clearfix"></div>
-
-					<label>Condition <span></span></label>
-					<input name="p_condition" type="text" class="phone" placeholder="">
-					<div class="clearfix"></div>
-
-
-					<label>Item Type <span></span></label>
-					<input name="P_item_type" type="text" class="phone" placeholder="">
-					<div class="clearfix"></div>
+                    <label>Item Type <span></span></label>
+                    <input name="P_item_type" type="text" class="phone" placeholder="">
+                    <div class="clearfix"></div>
 
 
 
 
-					<label>Ad Description <span>*</span></label>
-					<textarea name="p_decription" id="editor"   class="form-control tinymce" placeholder="Write few lines about your product"></textarea>
-					<div class="clearfix"></div>
-				<div class="upload-ad-photos">
-				<label>Photos for your ad :</label>	
-					<div class="photos-upload-view">
-						<input name="P_imag1" type="file" class="phone" placeholder="">
-					</div>
-					<div class="clearfix"></div>
-						
-				</div>
-				<div class="upload-ad-photos">
-				<label>2nd Photos for your ad :(optional)</label>	
-					<div class="photos-upload-view">
-						<input name="P_imag2" type="file" class="phone" placeholder="">
-					</div>
-					<div class="clearfix"></div>
-						
-				</div>
-				<div class="upload-ad-photos">
-				<label>3rd Photos for your ad :(optional)</label>	
-					<div class="photos-upload-view">
-						<input name="P_imag3" type="file" class="phone" placeholder="">
-					</div>
-					<div class="clearfix"></div>
-						
-				</div>
-				<div class="upload-ad-photos">
-				<label>4th Photos for your ad :(optional)</label>	
-					<div class="photos-upload-view">
-						<input name="P_imag4" type="file" class="phone" placeholder="">
-					</div>
-					<div class="clearfix"></div>
-						
-				</div>
-					<div class="personal-details">
-					
-						
-						<label>Your Mobile No <span>*</span></label>
-						<input name="p_contact_number" type="text" class="phone" placeholder="">
-						<div class="clearfix"></div>
-					
-						<p class="post-terms">By clicking <strong>post Button</strong> you accept our <a href="terms.php" target="_blank">Terms of Use </a> and <a href="privacy.php" target="_blank">Privacy Policy</a></p>
-					<input type="submit" value="Post">					
-					<div class="clearfix"></div>
-					</form>
-					</div>
-			</div>
-		</div>	
-	</div>
-	<!-- // Submit Ad -->
+                    <label>Ad Description <span>*</span></label>
+                    <textarea name="p_decription" id="editor"   class="form-control tinymce" placeholder="Write few lines about your product"></textarea>
+                    <div class="clearfix"></div>
+                <div class="upload-ad-photos">
+                <label>Photos for your ad :</label> 
+                    <div class="photos-upload-view">
+                        <input name="P_imag1" type="file" class="phone" placeholder="">
+                    </div>
+                    <div class="clearfix"></div>
+                        
+                </div>
+                <div class="upload-ad-photos">
+                <label>2nd Photos for your ad :(optional)</label>   
+                    <div class="photos-upload-view">
+                        <input name="P_imag2" type="file" class="phone" placeholder="">
+                    </div>
+                    <div class="clearfix"></div>
+                        
+                </div>
+                <div class="upload-ad-photos">
+                <label>3rd Photos for your ad :(optional)</label>   
+                    <div class="photos-upload-view">
+                        <input name="P_imag3" type="file" class="phone" placeholder="">
+                    </div>
+                    <div class="clearfix"></div>
+                        
+                </div>
+                <div class="upload-ad-photos">
+                <label>4th Photos for your ad :(optional)</label>   
+                    <div class="photos-upload-view">
+                        <input name="P_imag4" type="file" class="phone" placeholder="">
+                    </div>
+                    <div class="clearfix"></div>
+                        
+                </div>
+                    <div class="personal-details">
+                    
+                        
+                        <label>Your Mobile No <span>*</span></label>
+                        <input name="p_contact_number" type="text" class="phone" placeholder="">
+                        <div class="clearfix"></div>
+                    
+                        <p class="post-terms">By clicking <strong>post Button</strong> you accept our <a href="terms.php" target="_blank">Terms of Use </a> and <a href="privacy.php" target="_blank">Privacy Policy</a></p>
+                    <input type="submit" value="Post">                  
+                    <div class="clearfix"></div>
+
+
+
+                </form>
+            </div>
+        </div>
+    </div>
+
+
+
+
+        <script src="https://code.jquery.com/jquery-3.5.1.min.js"  crossorigin="anonymous"></script>
+        <script>
+            $(document).ready(function() {
+                $('#category-dropdown').on('change', function() {
+                    var category_id = this.value;
+                    var lang = "<?php echo $lang;  ?>";
+                    
+                    $.ajax({
+                        url: "get-subcat.php",
+                        type: "POST",
+                        data: {
+                            category_id: category_id,lang:lang
+                        },
+                        cache: false,
+                        success: function(result) {
+                            $("#sub-category-dropdown").html(result);
+                        }
+                    });
+
+                });
+            });
+        </script>
+    
 
 <?php include 'inc/foter.php'; ?> 

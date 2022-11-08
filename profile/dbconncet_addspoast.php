@@ -141,7 +141,9 @@
     $zip_code = addslashes ($_POST['zip_code']);
     $uni_id = addslashes ($_POST['uni_id']);
     $P_title = addslashes ($_POST['P_title']);
-    $P_catagory = addslashes ($_POST['P_catagory']);
+    $from_catagory = addslashes ($_POST['P_catagory']);
+    $P_catagory= substr($from_catagory , 0, -2);  
+    $p_sub_catagory = addslashes ($_POST['p_sub_catagory']);
     $p_price = addslashes ($_POST['p_price']);
     $p_condition = addslashes ($_POST['p_condition']);
     $P_item_type = addslashes ($_POST['P_item_type']);
@@ -156,12 +158,12 @@
 
 
 
-  $sql = "INSERT INTO  adds (city, county, zip_code, uni_id, P_title, P_catagory, p_price, p_condition,  P_item_type, p_decription,  p_contact_number, P_imag1, P_imag2, P_imag3, P_imag4) VALUES ('$city','$county', '$zip_code',  '$uni_id','$P_title','$P_catagory', '$p_price','$p_condition', '$P_item_type', '$p_decription', '$p_contact_number', '$P_imag1', '$P_imag2', '$P_imag3', '$P_imag4') 
+  $sql = "INSERT INTO  adds (city, county, zip_code, uni_id, P_title, P_catagory, p_sub_catagory, p_price, p_condition,  P_item_type, p_decription,  p_contact_number, P_imag1, P_imag2, P_imag3, P_imag4) VALUES ('$city','$county', '$zip_code',  '$uni_id','$P_title','$P_catagory','$p_sub_catagory', '$p_price','$p_condition', '$P_item_type', '$p_decription', '$p_contact_number', '$P_imag1', '$P_imag2', '$P_imag3', '$P_imag4') 
     ";
   if ($conn->query($sql) === TRUE) 
   {    
       
-      header("location: employer-dashboard.php");
+      header("location: user-dashboard.php");
   } 
   else 
   {   

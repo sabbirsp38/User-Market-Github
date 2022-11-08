@@ -14,7 +14,22 @@
 
 
 
-
+  <?php 
+                  $per_page = 9;
+                  if (isset($_GET["page"])) {
+                    $page= $_GET["page"];
+                  }else{
+                    $page =1;
+                  }
+                  $start_from = ($page-1) * $per_page;
+                  ?>
+                       <?php
+                        
+                      $query = "select * from adds "; 
+                      $result = $db->select($query);
+                      $total_rows = mysqli_num_rows($result);
+                      $total_page = ceil ($total_rows/$per_page);
+                      ?>
 
 
 			<ol class="breadcrumb" style="margin-bottom: 5px;">
@@ -38,11 +53,7 @@
 							<span class="text">All Ads</span>
 						  </a>
 						</li>
-						<li role="presentation" class="next">
-						  <a href="#profile" role="tab" id="profile-tab" data-toggle="tab" aria-controls="profile">
-							<span class="text">Ads with Photos</span>
-						  </a>
-						</li>
+						
 						
 					  </ul>
 					  <div id="myTabContent" class="tab-content">
@@ -56,81 +67,80 @@
 								</div>
 								<div class="clearfix"></div>
 							<ul class="list">
-								<a href="single.php">
+
+ <?php
+                          $query = "select * from adds order by id desc limit $start_from, $per_page";
+                          $post = $db->select($query);
+                          if ($post) {
+                            while ($result= $post -> fetch_assoc()) {
+                            ?>
+
+
+								<a href="single.php? $id=<?php echo $result['id']; ?>">
 									<li>
-									<img src="images/m1.jpg" title="" alt="" />
+									<img src="uploads/<?php echo $result['P_imag1']; ?>" title="" alt="" />
 									<section class="list-left">
-									<h5 class="title">There are many variations of passages of Lorem Ipsum</h5>
-									<span class="adprice">$290</span>
-									<p class="catpath">Mobile Phones » Brand</p>
+									<h5 class="title"><?php echo $result['P_title']; ?></h5>
+									<span class="adprice"><?php echo $result['p_price']; ?></span>
+									<p class="catpath"><?php echo $result['p_condition']; ?></p>
 									</section>
 									<section class="list-right">
-									<span class="date">Today, 17:55</span>
-									<span class="cityname">City name</span>
+									<span class="date"><?php $dbtime =strtotime($result['time']);echo  date("Y-m-d", "$dbtime")?></span>
+									<span class="cityname"><?php echo $result['city']; ?>,<?php echo $result['county']; ?></span>
 									</section>
 									<div class="clearfix"></div>
 									</li> 
 								</a>
-							</ul>
-						</div>
-							</div>
-						</div>
-						<div role="tabpanel" class="tab-pane fade" id="profile" aria-labelledby="profile-tab">
-						 <div>
-												<div id="container">
-								<div class="view-controls-list" id="viewcontrols">
-									<label>view :</label>
-									<a class="gridview"><i class="glyphicon glyphicon-th"></i></a>
-									<a class="listview active"><i class="glyphicon glyphicon-th-list"></i></a>
-								</div>
-								<div class="sort">
-								   <div class="sort-by">
-										<label>Sort By : </label>
-										<select>
-														<option value="">Most recent</option>
-														<option value="">Price: Rs Low to High</option>
-														<option value="">Price: Rs High to Low</option>
-										</select>
-									   </div>
-									 </div>
-								<div class="clearfix"></div>
-							<ul class="list">
 
 
-								<a href="single.php">
-									<li>
-									<img src="images/m1.jpg" title="" alt="" />
-									<section class="list-left">
-									<h5 class="title">There are many variations of passages of Lorem Ipsum</h5>
-									<span class="adprice">$290</span>
-									<p class="catpath">Mobile Phones » Brand</p>
-									</section>
-									<section class="list-right">
-									<span class="date">Today, 17:55</span>
-									<span class="cityname">City name</span>
-									</section>
-									<div class="clearfix"></div>
-									</li> 
-								</a>
+
+<?php }?>
+
+
+
 							</ul>
 						</div>
 							</div>
 						</div>
 
+
+
+
+				
 
 
 
 						<ul class="pagination pagination-sm">
-							<li><a href="#">Prev</a></li>
-							<li><a href="#">1</a></li>
-							<li><a href="#">2</a></li>
-							<li><a href="#">3</a></li>
-							<li><a href="#">4</a></li>
-							<li><a href="#">5</a></li>
-							<li><a href="#">6</a></li>
-							<li><a href="#">7</a></li>
-							<li><a href="#">8</a></li>
-							<li><a href="#">Next</a></li>
+
+ <?php
+                      $query = "select * from adds"; 
+                      $result = $db->select($query);
+                      $total_rows = mysqli_num_rows($result);
+                      $total_page = ceil ($total_rows/$per_page);?>
+
+                      <?php
+                      echo " <li><a href='all-classifieds.php?page=1'>First Page</a></li>";
+
+                      for ($i=1; $i<= $total_page; $i++) { 
+                       echo "<li><a class='page-numbers' href='all-classifieds.php?page=".$i." '>".$i. "</a></li>";
+                       } 
+
+
+                       echo "<li><a href='all-classifieds.php?page=$total_page'>Last Page</a></span></li>"?>
+
+                      
+             
+               
+
+                  <!--paginetation-->
+  
+    
+    <?php } ?>
+							
+
+
+
+
 						</ul>
 					  </div>
 					</div>

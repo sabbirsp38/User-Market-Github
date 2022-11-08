@@ -80,3 +80,21 @@
 
 
 </html>
+<script>
+            $(document).ready(function() {
+                $('#category-dropdown').on('change', function() {
+                    var category_id = this.value;
+                    $.ajax({
+                        url: "get-subcat.php",
+                        type: "POST",
+                        data: {
+                            category_id: category_id
+                        },
+                        cache: false,
+                        success: function(result) {
+                            $("#sub-category-dropdown").html(result);
+                        }
+                    });
+                });
+            });
+        </script>

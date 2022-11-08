@@ -4823,3 +4823,10 @@ label {
 .padding-bottom-70{
 	padding-bottom: 70px;
 }
+
+.logout-but {
+    color: white;
+    background: #01a185;
+    margin-top: 20px;
+    margin-left: 5px;
+}
