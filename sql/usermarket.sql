@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 5.2.0
+-- version 5.1.1
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Nov 04, 2022 at 04:55 PM
--- Server version: 10.4.24-MariaDB
--- PHP Version: 7.4.29
+-- Generation Time: Nov 09, 2022 at 08:37 AM
+-- Server version: 10.4.21-MariaDB
+-- PHP Version: 8.0.11
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -55,7 +55,12 @@ CREATE TABLE `adds` (
 --
 
 INSERT INTO `adds` (`id`, `P_title`, `P_catagory`, `p_sub_catagory`, `p_decription`, `P_city`, `p_sate`, `p_price`, `p_condition`, `P_item_type`, `p_contact_number`, `P_imag1`, `P_imag2`, `P_imag3`, `P_imag4`, `time`, `city`, `county`, `zip_code`, `uni_id`) VALUES
-(8, 'Ad Title', 0, 0, 'Ad Description ', '', '', '452452452', 'Condition', 'Item Type', '9849849', '2ca8c07ce5.png', '2ca8c07ce56d7ed21f359c22d71ca52e.jpg', '2ca8c07ce56d7ed21f359c22d71ca5.png', '2ca8c07ce56d7ed21f35.png', '2022-11-04 04:49:18', 'Dhaka', 'Bangladesh', '1620', '64b4c5bed2cc943f639c0e11dbfff14a');
+(14, 'product 1', 43050, 10, 'fsd fsf f sfsfsf s', '', '', '465465', 'old', 'sdfdf', '34234234234', '9c4d3e1c72.jpg', '9c4d3e1c72ead563d01bdf73bafb17d8.', '9c4d3e1c72ead563d01bdf73bafb17.', '9c4d3e1c72ead563d01b.', '2022-11-08 16:16:16', 'Dhaka', 'Bangladesh', '1620', '64b4c5bed2cc943f639c0e11dbfff14a'),
+(15, 'product 2', 94368, 11, 'twet wet twwte wtwt t t', '', '', '3252353', 'old', 'twt', '3423424', '592680977c.jpg', '592680977c38c6b59b211c4753660288.', '592680977c38c6b59b211c47536602.', '592680977c38c6b59b21.', '2022-11-08 16:17:21', 'Dhaka', 'Bangladesh', '1620', '64b4c5bed2cc943f639c0e11dbfff14a'),
+(16, 'p3', 43050, 10, 'sdfsdf', '', '', '324234', 'sdfdsdf', 'fdsfsdf', '325235253', 'bca6ec3978.jpg', 'bca6ec39784418157398b63702cf1ad9.', 'bca6ec39784418157398b63702cf1a.', 'bca6ec39784418157398.', '2022-11-08 16:26:33', 'Dhaka', 'Bangladesh', '1620', '64b4c5bed2cc943f639c0e11dbfff14a'),
+(17, 'p4', 94368, 11, '142124', '', '', '2141', 'sg', '14214', '234234234', '9b1ae92af8.jpg', '9b1ae92af8c3f58bcd843ed33cbd51d0.', '9b1ae92af8c3f58bcd843ed33cbd51.', '9b1ae92af8c3f58bcd84.', '2022-11-08 16:27:09', 'Dhaka', 'Bangladesh', '1620', '64b4c5bed2cc943f639c0e11dbfff14a'),
+(18, 'sgsgsdg', 43050, 10, 'sdgsg', '', '', '342342', 'dsfsd', 'gsdgd', '1231231', '9824b8a461.jpg', '9824b8a46150839f7206303882db4e51.', '9824b8a46150839f7206303882db4e.', '9824b8a46150839f7206.', '2022-11-08 16:27:41', 'Dhaka', 'Bangladesh', '1620', '64b4c5bed2cc943f639c0e11dbfff14a'),
+(19, 'asdasd', 94368, 11, 'dsasd', '', '', 'asdqee', 'sadad', 'asda', 'asdasd', '168e8b538a.jpg', '168e8b538a9b793ec3daecf65b57e93f.', '168e8b538a9b793ec3daecf65b57e9.', '168e8b538a9b793ec3da.', '2022-11-08 16:28:44', 'Dhaka', 'Bangladesh', '1620', '64b4c5bed2cc943f639c0e11dbfff14a');
 
 -- --------------------------------------------------------
 
@@ -66,9 +71,16 @@ INSERT INTO `adds` (`id`, `P_title`, `P_catagory`, `p_sub_catagory`, `p_decripti
 CREATE TABLE `admin` (
   `id` int(11) NOT NULL,
   `name` varchar(250) NOT NULL,
-  `user_name` varchar(250) NOT NULL,
+  `username` varchar(250) NOT NULL,
   `password` varchar(250) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `admin`
+--
+
+INSERT INTO `admin` (`id`, `name`, `username`, `password`) VALUES
+(1, 'Sabbir', 'admin', 'admin');
 
 -- --------------------------------------------------------
 
@@ -78,7 +90,7 @@ CREATE TABLE `admin` (
 
 CREATE TABLE `category` (
   `id` int(11) NOT NULL,
-  `cat_id` int(1) NOT NULL,
+  `cat_id` int(11) NOT NULL,
   `en_title` varchar(250) NOT NULL,
   `de_title` varchar(250) NOT NULL,
   `icon` varchar(250) NOT NULL,
@@ -88,17 +100,17 @@ CREATE TABLE `category` (
   `de_banner_dec` varchar(250) NOT NULL,
   `en_botton_text` varchar(250) NOT NULL,
   `de_botton_text` varchar(250) NOT NULL,
-  `button_url` varchar(250) NOT NULL
+  `button_url` varchar(250) NOT NULL,
+  `banner_img` varchar(250) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- Dumping data for table `category`
 --
 
-INSERT INTO `category` (`id`, `cat_id`, `en_title`, `de_title`, `icon`, `en_banner_title`, `de_banner_title`, `en_banner_dec`, `de_banner_dec`, `en_botton_text`, `de_botton_text`, `button_url`) VALUES
-(1, 0, 'name English 1', 'Name Garman 1', 'cat1.png', '', '', '', '', '', '', ''),
-(2, 0, 'name English 2', 'Name Garman 2', 'cat2.png', '', '', '', '', '', '', ''),
-(3, 3, 'Genarel', 'Garman Genarel', 'cat1.png', 'English Title ', 'Garman Title ', 'English Description ', 'Garman Description ', 'English button', 'Garman button', 'profile/post-ad.php');
+INSERT INTO `category` (`id`, `cat_id`, `en_title`, `de_title`, `icon`, `en_banner_title`, `de_banner_title`, `en_banner_dec`, `de_banner_dec`, `en_botton_text`, `de_botton_text`, `button_url`, `banner_img`) VALUES
+(8, 43050, 'cat 1', 'cat 1 g', 'c29e69ecaa.jpg', 'fwf', 'efwwef', 'fewfe', 'fewfef', 'fwef', 'fwewe', 'http://localhost/User%20markt/profile/post-ad.php', 'a617ae604d.jpg'),
+(9, 94368, 'cat 2', 'cat 2 g', '83a0fd6ccd.jpg', '', '', '', '', '', '', '', '');
 
 -- --------------------------------------------------------
 
@@ -137,6 +149,14 @@ CREATE TABLE `sub_catagory` (
   `de_name` varchar(250) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
+--
+-- Dumping data for table `sub_catagory`
+--
+
+INSERT INTO `sub_catagory` (`id`, `parent_cat`, `en_name`, `de_name`) VALUES
+(10, 43050, 'sub 1', 'sub 1 g'),
+(11, 94368, 'sub 2', 'sub 2 g');
+
 -- --------------------------------------------------------
 
 --
@@ -160,8 +180,7 @@ CREATE TABLE `users` (
 --
 
 INSERT INTO `users` (`id`, `name`, `password`, `uni_id`, `email`, `time`, `city`, `county`, `zip_code`) VALUES
-(6, 'sabbir', 'a', '64b4c5bed2cc943f639c0e11dbfff14a', 'a@a.a', '2022-11-03 05:52:57', 'Dhaka', 'Bangladesh', '1620'),
-(7, 'Subject', 'b', 'ddf3e60b0215d15bf4e0c14e049cc454', 'b@b.b', '2022-11-04 11:17:24', 'Dhaka', 'india', '111');
+(6, 'sabbir', 'a', '64b4c5bed2cc943f639c0e11dbfff14a', 'a@a.a', '2022-11-03 05:52:57', 'Dhaka', 'Bangladesh', '1620');
 
 --
 -- Indexes for dumped tables
@@ -211,31 +230,31 @@ ALTER TABLE `users`
 -- AUTO_INCREMENT for table `adds`
 --
 ALTER TABLE `adds`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=20;
 
 --
 -- AUTO_INCREMENT for table `admin`
 --
 ALTER TABLE `admin`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- AUTO_INCREMENT for table `category`
 --
 ALTER TABLE `category`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
 
 --
 -- AUTO_INCREMENT for table `location`
 --
 ALTER TABLE `location`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 
 --
 -- AUTO_INCREMENT for table `sub_catagory`
 --
 ALTER TABLE `sub_catagory`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
 
 --
 -- AUTO_INCREMENT for table `users`

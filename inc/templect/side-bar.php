@@ -10,42 +10,36 @@
 			
 				<div class="featured-ads">
 					<h2 class="sear-head fer">Featured Ads</h2>
+
+
+
+					 <?php
+                          $query = "SELECT * FROM adds
+ORDER BY RAND()
+LIMIT 6;";
+                          $post = $db->select($query);
+                          if ($post) {
+                            while ($result= $post -> fetch_assoc()) {
+                            ?>
+
+
 					<div class="featured-ad">
-						<a href="single.php">
+						<a href="single.php? $id=<?php echo $result['id']; ?>">
 							<div class="featured-ad-left">
-								<img src="images/f1.jpg" title="ad image" alt="" />
+								<img src="uploads/<?php echo $result['P_imag1']; ?>" title="ad image" alt="" />
 							</div>
 							<div class="featured-ad-right">
-								<h4>Lorem Ipsum is simply dummy text of the printing industry</h4>
-								<p>$ 450</p>
+								<h4><?php echo $result['P_title']; ?></h4>
+								<p>€ <?php echo $result['p_price']; ?></p>
 							</div>
 							<div class="clearfix"></div>
 						</a>
 					</div>
-					<div class="featured-ad">
-						<a href="single.php">
-							<div class="featured-ad-left">
-								<img src="images/f2.jpg" title="ad image" alt="" />
-							</div>
-							<div class="featured-ad-right">
-								<h4>Lorem Ipsum is simply dummy text of the printing industry</h4>
-								<p>$ 380</p>
-							</div>
-							<div class="clearfix"></div>
-						</a>
-					</div>
-					<div class="featured-ad">
-						<a href="single.php">
-							<div class="featured-ad-left">
-								<img src="images/f3.jpg" title="ad image" alt="" />
-							</div>
-							<div class="featured-ad-right">
-								<h4>Lorem Ipsum is simply dummy text of the printing industry</h4>
-								<p>$ 560</p>
-							</div>
-							<div class="clearfix"></div>
-						</a>
-					</div>
+
+					 <?php }} ?>
+
+
+					
 					<div class="clearfix"></div>
 				</div>
 				</div>

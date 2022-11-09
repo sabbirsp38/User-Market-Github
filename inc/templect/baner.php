@@ -4,9 +4,9 @@ $id="";
 
 if (isset($id)) {
 
-  $id= 43050;
+  
 
-  $query = "select * from category where cat_id= $id";
+  $query = "select * from category where cat_id= 43050";
   $post = $db->select($query);
   if ($post) {
   $result= $post -> fetch_assoc(); ?>
@@ -31,7 +31,7 @@ if (isset($id)) {
 }else{
  
 
-  $query = "select * from category where cat_id= $cat_id";
+  $query = "select * from category where cat_id= $id";
   $post = $db->select($query);
   if ($post) {
   $result= $post -> fetch_assoc(); ?>

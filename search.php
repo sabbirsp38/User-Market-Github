@@ -12,6 +12,17 @@
 
 
 
+<?php
+
+
+   $search_location = $_GET['search_location'];
+   $search_cat = $_GET['search_cat'];
+   $search_text = $_GET['search_text'];
+
+
+
+
+  ?>
 
 
   <?php 
@@ -69,7 +80,7 @@
 							<ul class="list">
 
  <?php
-                          $query = "select * from adds order by id desc limit $start_from, $per_page";
+                          $query = "select * from adds  WHERE  P_title LIKE '%$search_text%' OR p_decription LIKE '%$search_text%' AND P_city LIKE '%$search_location%' AND P_catagory LIKE '%$search_cat%' order by id desc limit $start_from, $per_page";
                           $post = $db->select($query);
                           if ($post) {
                             while ($result= $post -> fetch_assoc()) {
