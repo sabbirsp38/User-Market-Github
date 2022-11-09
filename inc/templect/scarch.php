@@ -5,7 +5,7 @@
 				<div class="select-city-for-local-ads ads-list">
 					<label>Select your city to see local ads</label>
 						<select name="search_location">
-							<option>Entire Location</option>
+							<option  value="">Entire Location</option>
 							 <?php
                           $query = "select * from location";
                           $post = $db->select($query);
@@ -22,7 +22,7 @@
 				<div class="browse-category ads-list">
 					<label>Browse Categories</label>
 					<select name="search_cat" class="selectpicker show-tick" data-live-search="true">
-                       <option>Entire Categories</option>
+                       <option value="">Entire Categories</option>
 					 <?php
                           $query = "select * from category";
                           $post = $db->select($query);

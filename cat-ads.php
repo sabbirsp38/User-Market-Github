@@ -12,20 +12,15 @@
 
 
 
-<?php
-
-
-   $search_location = $_GET['search_location'];
-   $search_cat = $_GET['search_cat'];
-   $search_text = $_GET['search_text'];
-
-
-
-
-  ?>
 
 
   <?php 
+   if (!isset($_GET['$id']) || $_GET['$id']==NULL  ) {
+            header("Location: 404.php") ;
+           
+          }else{
+             $id= $_GET['$id'];
+          }
                   $per_page = 9;
                   if (isset($_GET["page"])) {
                     $page= $_GET["page"];
@@ -36,7 +31,7 @@
                   ?>
                        <?php
                         
-                      $query = "select * from adds "; 
+                      $query = "select * from adds where P_catagory=$id"; 
                       $result = $db->select($query);
                       $total_rows = mysqli_num_rows($result);
                       $total_page = ceil ($total_rows/$per_page);
@@ -47,7 +42,6 @@
 			  <li><a href="index.php">Home</a></li>
 			  <li class="active">All Ads</li>
 			</ol>
-			
 			<div class="ads-grid">
 				
 
@@ -81,7 +75,7 @@
 							<ul class="list">
 
  <?php
-                          $query = "select * from adds  WHERE  P_title LIKE '%$search_text%' OR p_decription LIKE '%$search_text%' AND P_city LIKE '%$search_location%' AND P_catagory LIKE '%$search_cat%' order by id desc limit $start_from, $per_page";
+                          $query = "select * from adds where P_catagory=$id order by id desc limit $start_from, $per_page";
                           $post = $db->select($query);
                           if ($post) {
                             while ($result= $post -> fetch_assoc()) {
@@ -125,7 +119,7 @@
 						<ul class="pagination pagination-sm">
 
  <?php
-                      $query = "select * from adds"; 
+                      $query = "select * from adds where P_catagory=$id"; 
                       $result = $db->select($query);
                       $total_rows = mysqli_num_rows($result);
                       $total_page = ceil ($total_rows/$per_page);?>

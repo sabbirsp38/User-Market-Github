@@ -4830,3 +4830,12 @@ label {
     margin-top: 20px;
     margin-left: 5px;
 }
+
+#submit-but {
+    background: url(../images/search.png) no-repeat 13px 11px rgba(24, 169, 158, 0.47);
+    width: 44px;
+    height: 39px;
+    border: none;
+    padding: 0;
+    margin-top: 0;
+}

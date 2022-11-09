@@ -1,11 +1,5 @@
 <div class="side-bar col-md-3">
-					<div class="search-hotel">
-					<h3 class="sear-head">Name contains</h3>
-					<form>
-						<input type="text" value="Product name..." onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Product name...';}" required="">
-						<input type="submit" value=" ">
-					</form>
-				</div>
+				
 				
 			
 				<div class="featured-ads">

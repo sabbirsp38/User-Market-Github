@@ -11,7 +11,7 @@
                             while ($result= $post -> fetch_assoc()) {
                             ?>
 
-					<li><a href="mobiles.php">
+					<li><a href="cat-ads.php? $id=<?php echo $result['cat_id']; ?>">
 
 
 						<?php echo $result[$lang.'_title']; ?>

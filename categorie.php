@@ -69,7 +69,7 @@
 										?>
 
 									
-									<a href="all-classifieds.php? $id=<?php echo $result['id']; ?>">View all Ads</a>
+									<a href="cat-ads.php? $id=<?php echo $result['cat_id']; ?>">View all Ads</a>
 								</div>
 								<div class="clearfix"></div>
 							</div>
@@ -96,7 +96,7 @@
                             while ($result2= $post2 -> fetch_assoc()) {
                             ?>
 						
-									<li><a href="mobiles.php"><?php echo $result2[$lang.'_name']; ?></a></li>
+									<li><a href="ads-sub.php? $id=<?php echo $result['id']; ?>"><?php echo $result2[$lang.'_name']; ?></a></li>
 								<?php }} ?>
 									<div class="clearfix"></div>
 								</ul>
