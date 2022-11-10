@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Nov 09, 2022 at 08:37 AM
+-- Generation Time: Nov 10, 2022 at 08:51 AM
 -- Server version: 10.4.21-MariaDB
 -- PHP Version: 8.0.11
 
@@ -110,7 +110,52 @@ CREATE TABLE `category` (
 
 INSERT INTO `category` (`id`, `cat_id`, `en_title`, `de_title`, `icon`, `en_banner_title`, `de_banner_title`, `en_banner_dec`, `de_banner_dec`, `en_botton_text`, `de_botton_text`, `button_url`, `banner_img`) VALUES
 (8, 43050, 'cat 1', 'cat 1 g', 'c29e69ecaa.jpg', 'fwf', 'efwwef', 'fewfe', 'fewfef', 'fwef', 'fwewe', 'http://localhost/User%20markt/profile/post-ad.php', 'a617ae604d.jpg'),
-(9, 94368, 'cat 2', 'cat 2 g', '83a0fd6ccd.jpg', '', '', '', '', '', '', '', '');
+(9, 94368, 'cat 2', 'cat 2 g', '83a0fd6ccd.jpg', '', '', '', '', '', '', '', ''),
+(10, 60516, '', '', 'b8c141e114.', '', '', '', '', '', '', '', '');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `contact_info`
+--
+
+CREATE TABLE `contact_info` (
+  `id` int(11) NOT NULL,
+  `en_location` varchar(110) NOT NULL,
+  `de_location` varchar(110) NOT NULL,
+  `en_number` varchar(110) NOT NULL,
+  `de_number` varchar(110) NOT NULL,
+  `en_email` varchar(110) NOT NULL,
+  `de_email` varchar(110) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `contact_info`
+--
+
+INSERT INTO `contact_info` (`id`, `en_location`, `de_location`, `en_number`, `de_number`, `en_email`, `de_email`) VALUES
+(1, 'en_location', 'de_location', 'en_number', 'de_number', 'en_email', 'de_email');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `footer`
+--
+
+CREATE TABLE `footer` (
+  `id` int(11) NOT NULL,
+  `en_titile` varchar(250) NOT NULL,
+  `de_titile` varchar(250) NOT NULL,
+  `en_dec` varchar(250) NOT NULL,
+  `de_dec` varchar(250) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `footer`
+--
+
+INSERT INTO `footer` (`id`, `en_titile`, `de_titile`, `en_dec`, `de_dec`) VALUES
+(1, 'english titile', 'Garman titile', 'englisg dec englisg dec englisg dec englisg dec englisg dec englisg dec englisg dec englisg dec englisg dec englisg dec englisg dec englisg dec englisg dec englisg dec englisg dec englisg dec englisg dec englisg dec englisg dec englisg dec englisg de', 'Garman decGarman decGarman decGarman decGarman decGarman decGarman decGarman decGarman decGarman decGarman decGarman decGarman decGarman decGarman decGarman decGarman decGarman decGarman decGarman decGarman decGarman decGarman decGarman decGarman dec');
 
 -- --------------------------------------------------------
 
@@ -135,6 +180,55 @@ CREATE TABLE `location` (
 INSERT INTO `location` (`id`, `en_city`, `de_city`, `en_zip_code`, `de_zip_code`, `en_country`, `de_country`) VALUES
 (1, 'Dhaka', 'Dhaka gar', '111', 'ggg', 'bd', 'gr'),
 (2, 'Norshingdi', 'Norshingdi g', '222', 'gm', 'india', 'india gar');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `seo`
+--
+
+CREATE TABLE `seo` (
+  `id` int(11) NOT NULL,
+  `en_meta_titile` varchar(250) NOT NULL,
+  `de_meta_titile` varchar(250) NOT NULL,
+  `en_meta_dec` varchar(250) NOT NULL,
+  `de_meta_dec` varchar(250) NOT NULL,
+  `en_meta_keword` varchar(250) NOT NULL,
+  `de_meta_keword` varchar(250) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `seo`
+--
+
+INSERT INTO `seo` (`id`, `en_meta_titile`, `de_meta_titile`, `en_meta_dec`, `de_meta_dec`, `en_meta_keword`, `de_meta_keword`) VALUES
+(1, 'en_meta_titile', 'de_meta_titile', 'en_meta_dec', 'de_meta_dec', 'en_meta_keword', 'de_meta_keword');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `snipet_code`
+--
+
+CREATE TABLE `snipet_code` (
+  `id` int(11) NOT NULL,
+  `snipet_code` varchar(500) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `social_midea`
+--
+
+CREATE TABLE `social_midea` (
+  `id` int(11) NOT NULL,
+  `link1` varchar(250) NOT NULL,
+  `link2` varchar(250) NOT NULL,
+  `link3` varchar(250) NOT NULL,
+  `link4` varchar(250) NOT NULL,
+  `link5` varchar(250) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 -- --------------------------------------------------------
 
@@ -205,9 +299,39 @@ ALTER TABLE `category`
   ADD PRIMARY KEY (`id`);
 
 --
+-- Indexes for table `contact_info`
+--
+ALTER TABLE `contact_info`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `footer`
+--
+ALTER TABLE `footer`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- Indexes for table `location`
 --
 ALTER TABLE `location`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `seo`
+--
+ALTER TABLE `seo`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `snipet_code`
+--
+ALTER TABLE `snipet_code`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `social_midea`
+--
+ALTER TABLE `social_midea`
   ADD PRIMARY KEY (`id`);
 
 --
@@ -242,13 +366,43 @@ ALTER TABLE `admin`
 -- AUTO_INCREMENT for table `category`
 --
 ALTER TABLE `category`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
+
+--
+-- AUTO_INCREMENT for table `contact_info`
+--
+ALTER TABLE `contact_info`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+
+--
+-- AUTO_INCREMENT for table `footer`
+--
+ALTER TABLE `footer`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT for table `location`
 --
 ALTER TABLE `location`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+
+--
+-- AUTO_INCREMENT for table `seo`
+--
+ALTER TABLE `seo`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+
+--
+-- AUTO_INCREMENT for table `snipet_code`
+--
+ALTER TABLE `snipet_code`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+
+--
+-- AUTO_INCREMENT for table `social_midea`
+--
+ALTER TABLE `social_midea`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT for table `sub_catagory`

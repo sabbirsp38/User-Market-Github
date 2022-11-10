@@ -37,13 +37,23 @@
                             <ul class="submenu">
                                 <li><a href="add-banner.php">Add Banner</a> </li>
                                 <li><a href="view-banner.php">Banner List</a> </li>
+                                <li><a href="add-fotter.php">Add Footer about section</a> </li>
+                                <li><a href="view-fotter.php">View Footer about section</a> </li>
+                                <li><a href="add-contact-info.php">Add contact info</a> </li>
+                                <li><a href="view-contact-info.php">View contact info</a> </li>
+                                <li><a href="add-social-info.php">Add social info</a> </li>
+                                <li><a href="view-social-info.php">View social info</a> </li>
                             </ul>
+                            
                         </li>
                         <li><a class="menuitem">SEO Settings</a>
                             <ul class="submenu">
-                                <li><a href="adduser.php">Add Admin</a> </li>
-                                <li><a href="userlist.php">Admin List</a> </li>
+                                <li><a href="add-meta.php">Add Meta Tag</a> </li>
+                                <li><a href="view-meta.php">View Meta Tag</a> </li>
+                                 <li><a href="add-Snippet.php">Add Snippet</a> </li>
+                                <li><a href="view-Snippet.php">View Snippet</a> </li>
                             </ul>
+                        
                         </li>
                         <li><a class="menuitem">Admin Option</a>
                             <ul class="submenu">

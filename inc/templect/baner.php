@@ -1,11 +1,7 @@
 
 <?php
-$id="";
-
-if (isset($id)) {
-
-  
-
+if (!isset($_GET['$id']) || $_GET['$id']==NULL  ) {
+            
   $query = "select * from category where cat_id= 43050";
   $post = $db->select($query);
   if ($post) {
@@ -18,18 +14,19 @@ if (isset($id)) {
 			<a href="<?php echo $result['button_url']; ?>"><?php echo $result[$lang.'_botton_text']; ?></a>
 	  </div>
 	</div>
+	<style type="text/css">
+		.banner {
+	background:url('uploads/<?php echo $result['banner_img'];?>') no-repeat 0px 0px;
+}
+.main-banner {
+	background:url('uploads/<?php echo $result['banner_img'];?>') no-repeat 0px 0px;
+}
+	</style>
+           
+     <?php      }}else{
+             $id= $_GET['$id'];
+          
 
-
-<?php 
-
- } 
-
-
-
-
-  
-}else{
- 
 
   $query = "select * from category where cat_id= $id";
   $post = $db->select($query);
@@ -44,10 +41,18 @@ if (isset($id)) {
 	  </div>
 	</div>
 
+<style type="text/css">
+		.banner {
+	background:url('uploads/<?php echo $result['banner_img'];?>') no-repeat 0px 0px;
+}
+.main-banner {
+	background:url('uploads/<?php echo $result['banner_img'];?>') no-repeat 0px 0px;
+}
+	</style>
 
 <?php 
 
- } } 
+ } }
 
 
 ?>
