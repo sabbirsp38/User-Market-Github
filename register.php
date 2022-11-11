@@ -61,7 +61,7 @@
 		<div class="row justify-content-center">
 			<div class="col-md-6 col-md-offset-3" align="center">
 				<center><h1>Create an account</h1></center>
-                 <center><p class="colrtext">Already Have Account <a href="UProfile/index.php">Log In</a></p></center>
+                 <center><p class="colrtext"><?php echo $language["Already_Have_Account"]; ?> <a href="profile/index.php"><?php echo $language["Log_in"]; ?></a></p></center>
 
 				<br><br>
 
@@ -69,20 +69,20 @@
 
 				<form method="post" action="register.php">
 
-					<input class="form-control" name="name" placeholder="Name..."><br>
-					<input class="form-control" name="email" type="email" placeholder="Email..."><br>
-					<input class="form-control" name="password" type="password" placeholder="Password..."><br>
-					<input class="form-control" name="cPassword" type="password" placeholder="Confirm Password..."><br>
+					<input class="form-control" name="name" placeholder="<?php echo $language["Name"]; ?>..."><br>
+					<input class="form-control" name="email" type="email" placeholder="<?php echo $language["Email"]; ?>..."><br>
+					<input class="form-control" name="password" type="password" placeholder="<?php echo $language["Password"]; ?>..."><br>
+					<input class="form-control" name="cPassword" type="password" placeholder="<?php echo $language["Confirm_Password"]; ?>..."><br>
 					<div class="autocomplete">
-					    <input id="CityInput" class="form-control" name="city" type="text" placeholder="City"><br>
+					    <input id="CityInput" class="form-control" name="city" type="text" placeholder="<?php echo $language["City"]; ?>"><br>
 					</div>
 					<div class="autocomplete">
-					    <input id="zip_codeInput" class="form-control" name="zip_code" type="text" placeholder="zip code"><br>
+					    <input id="zip_codeInput" class="form-control" name="zip_code" type="text" placeholder="<?php echo $language["zip_code"]; ?>"><br>
 					</div>
 					<div class="autocomplete">
-					    <input id="countyInput" class="form-control" name="county" type="text" placeholder="county"><br>
+					    <input id="countyInput" class="form-control" name="county" type="text" placeholder="<?php echo $language["county"]; ?>"><br>
 					</div>
-					<input class="loginbut" type="submit" name="submit" value="Create">
+					<input class="loginbut" type="submit" name="submit" value="<?php echo $language["Submit"]; ?>">
 
             </form>
 

@@ -32,7 +32,7 @@
               </ul>
             </div>
             <div class="col-md-3 footer-grid">
-              <h4 class="footer-head">Contact_Us<?php echo $language["LIST_TITLE"]; ?></h4>
+              <h4 class="footer-head"><?php echo $language["Contact_Us"]; ?></h4>
               <span class="hq"><?php echo $language["Our_headquarters"]; ?></span>
               <address>
                 <ul class="location">

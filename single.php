@@ -32,7 +32,7 @@
 			<div class="product-desc">
 				<div class="col-md-7 product-view">
 					<h2><?php echo $result['P_title']; ?></h2>
-					<p> <i class="glyphicon glyphicon-map-marker"></i><span><?php echo $result['city']; ?></span>, <span><?php echo $result['county']; ?></span>| Added at <?php echo $result['time']; ?>, Ad ID: <?php echo $result['id']; ?></p>
+					<p> <i class="glyphicon glyphicon-map-marker"></i><span><?php echo $result['city']; ?></span>, <span><?php echo $result['county']; ?></span>| <?php echo $language["Added_at"]; ?> <?php echo $result['time']; ?>, <?php echo $language["Ad_ID"]; ?>: <?php echo $result['id']; ?></p>
 					<div class="flexslider">
 						<ul class="slides">
 							<li data-thumb="uploads/<?php echo $result['P_imag1']; ?>">
@@ -71,23 +71,23 @@
 				<div class="col-md-5 product-details-grid">
 					<div class="item-price">
 						<div class="product-price">
-							<p class="p-price">Price</p>
+							<p class="p-price"><?php echo $language["Price"]; ?></p>
 							<h3 class="rate">$ <?php echo $result['p_price']; ?></h3>
 							<div class="clearfix"></div>
 						</div>
 						<div class="condition">
-							<p class="p-price">Condition</p>
+							<p class="p-price"><?php echo $language["Condition"]; ?></p>
 							<h4><?php echo $result['p_condition']; ?></h4>
 							<div class="clearfix"></div>
 						</div>
 						<div class="itemtype">
-							<p class="p-price">Item Type</p>
+							<p class="p-price"><?php echo $language["Item_Type"]; ?></p>
 							<h4><?php echo $result['P_item_type']; ?></h4>
 							<div class="clearfix"></div>
 						</div>
 					</div>
 					<div class="interested text-center">
-						<h4>Interested in this Ad?<small> Contact the Seller!</small></h4>
+						<h4><?php echo $language["Interested_in_this_Ad"]; ?>?<small> <?php echo $language["Contact_the_Seller"]; ?>!</small></h4>
 						<p><i class="glyphicon glyphicon-earphone"></i><?php echo $result['p_contact_number']; ?></p>
 					</div>
 						<div class="tips">

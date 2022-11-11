@@ -1,6 +1,6 @@
 
 			<div class="all-categories">
-				<h3> Select your category and find the perfect ad</h3>
+				<h3> <?php echo $language["Select_your_category_and_find_the_perfect_ad"]; ?></h3>
 				<ul class="all-cat-list">
 
 						 <?php
@@ -28,7 +28,7 @@
 										{
 										// Return the number of rows in result3 set
 										$rowcount=mysqli_num_rows($result3); ?>
-										<span><?php echo $rowcount; ?> Ads</span>
+										<span><?php echo $rowcount; ?> <?php echo $language["Ads"]; ?></span>
 										<?php
 										// Free result3 set
 										mysqli_free_result($result3);

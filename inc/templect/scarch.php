@@ -3,9 +3,9 @@
 			<div class="select-box">
 				<form action="search.php"  method="get">
 				<div class="select-city-for-local-ads ads-list">
-					<label>Select your city to see local ads</label>
+					<label><?php echo $language["Select_your_city_to_see_local_ads"]; ?></label>
 						<select name="search_location">
-							<option  value="">Entire Location</option>
+							<option  value=""><?php echo $language["Entire_Location"]; ?></option>
 							 <?php
                           $query = "select * from location";
                           $post = $db->select($query);
@@ -20,9 +20,9 @@
 			            </select>
 				</div>
 				<div class="browse-category ads-list">
-					<label>Browse Categories</label>
+					<label><?php echo $language["Browse_Categories"]; ?></label>
 					<select name="search_cat" class="selectpicker show-tick" data-live-search="true">
-                       <option value="">Entire Categories</option>
+                       <option value=""><?php echo $language["Entire_Categories"]; ?></option>
 					 <?php
                           $query = "select * from category";
                           $post = $db->select($query);
@@ -38,7 +38,7 @@
 					</select>
 				</div>
 				<div class="search-product ads-list">
-					<label>Search for a specific product</label>
+					<label><?php echo $language["Search_for_a_specific_product"]; ?></label>
 					<div class="search">
 						<div id="custom-search-input">
 						<div class="input-group">

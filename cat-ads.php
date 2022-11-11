@@ -39,8 +39,8 @@
 
 
 			<ol class="breadcrumb" style="margin-bottom: 5px;">
-			  <li><a href="index.php">Home</a></li>
-			  <li class="active">All Ads</li>
+			  <li><a href="index.php"><?php echo $language["Home"]; ?></a></li>
+			  <li class="active"><?php echo $language["All_Ads"]; ?></li>
 			</ol>
 			<div class="ads-grid">
 				
@@ -56,7 +56,7 @@
 					  <ul id="myTab" class="nav nav-tabs nav-tabs-responsive" role="tablist">
 						<li role="presentation" class="active">
 						  <a href="#home" id="home-tab" role="tab" data-toggle="tab" aria-controls="home" aria-expanded="true">
-							<span class="text">All Ads</span>
+							<span class="text"><?php echo $language["All_Ads"]; ?></span>
 						  </a>
 						</li>
 						
@@ -67,7 +67,7 @@
 						   <div>
 							 <div id="container">
 								<div class="view-controls-list" id="viewcontrols">
-									<label>view :</label>
+									<label> <?php echo $language["view"]; ?>:</label>
 									<a class="gridview"><i class="glyphicon glyphicon-th"></i></a>
 									<a class="listview active"><i class="glyphicon glyphicon-th-list"></i></a>
 								</div>
@@ -124,15 +124,15 @@
                       $total_rows = mysqli_num_rows($result);
                       $total_page = ceil ($total_rows/$per_page);?>
 
-                      <?php
-                      echo " <li><a href='all-classifieds.php?page=1'>First Page</a></li>";
+                     <?php
+                      echo " <li><a href='cat-ads.php?page=1'> ".$language['First_Page']." </a></li>";
 
                       for ($i=1; $i<= $total_page; $i++) { 
-                       echo "<li><a class='page-numbers' href='all-classifieds.php?page=".$i." '>".$i. "</a></li>";
+                       echo "<li><a class='page-numbers' href='cat-ads.php?page=".$i." '>".$i. "</a></li>";
                        } 
 
 
-                       echo "<li><a href='all-classifieds.php?page=$total_page'>Last Page</a></span></li>"?>
+                       echo "<li><a href='cat-ads.php?page=$total_page'> ".$language['Last_Page']. " </a></span></li>"?>
 
                       
              

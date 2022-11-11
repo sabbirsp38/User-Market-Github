@@ -114,7 +114,7 @@ LIMIT 4;";
 						<a href="mobileapp.php"><img src="images/app.png" alt=""></a>
 					</div>
 					<div class="col-md-7 app-right">
-						<h3><?php echo $language["LIST_TITLE"]; ?> </h3>
+						<h3><?php //echo $language["LIST_TITLE"]; ?> </h3>
 						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam auctor Sed bibendum varius euismod. Integer eget turpis sit amet lorem rutrum ullamcorper sed sed dui. vestibulum odio at elementum. Suspendisse et condimentum nibh.</p>
 						<div class="app-buttons">
 							<div class="app-button">
