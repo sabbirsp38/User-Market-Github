@@ -1,3 +1,10 @@
+<?php // include language configuration file based on selected language
+$lang = "en";
+if (isset($_GET['lang'])) {
+    $lang = $_GET['lang'];
+}
+require_once ("../inc/translet/lang." . $lang . ".php");
+?>
 
 
 <?php include '../config/config.php'; ?>

@@ -71,8 +71,7 @@ $fm = new Formet();
 						</div>
 						<div class="new_people">
 							<h2>For New People</h2>
-							<p>Having hands on experience in creating innovative designs,I do offer design 
-								solutions which harness.</p>
+							<p></p>
 							<a href="../register.php">Register Now!</a>
 						</div>
 					</div>

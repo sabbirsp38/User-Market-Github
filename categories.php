@@ -5,7 +5,7 @@
 	<!--Vertical Tab-->
 	<div class="categories-section main-grid-border">
 		<div class="container">
-			<h2 class="head">Main Categories</h2>
+			<h2 class="head"><?php echo $language["Main_Categories"]; ?></h2>
 			<div class="category-list">
 				<div id="parentVerticalTab">
 					<ul class="resp-tabs-list hor_1">
@@ -19,10 +19,10 @@
 						<li><?php echo $result[$lang.'_title']; ?></li>
 
 						<?php }} ?>
-						<a href="all-classifieds.php">All Ads</a>
+						<a href="all-classifieds.php"><?php echo $language["All_Ads"]; ?></a>
 					</ul>
 					<div class="resp-tabs-container hor_1">
-						<span class="active total" style="display:block;" data-toggle="modal" data-target="#myModal"><strong>All USA</strong> (Select your city to see local ads)</span>
+						<span class="active total" style="display:block;" data-toggle="modal" data-target="#myModal"><strong></strong> </span>
 
 			 <?php
 		
@@ -51,7 +51,7 @@
 										{
 										// Return the number of rows in result3 set
 										$rowcount=mysqli_num_rows($result3); ?>
-										<span><?php echo $rowcount; ?> Ads</span>
+										<span><?php echo $rowcount; ?> <?php echo $language["Ads"]; ?></span>
 										<?php
 										// Free result3 set
 										mysqli_free_result($result3);
@@ -63,7 +63,7 @@
 										?>
 
 									
-									<a href="cat-ads.php? $id=<?php echo $result['cat_id']; ?>">View all Ads</a>
+									<a href="cat-ads.php? $id=<?php echo $result['cat_id']; ?>"><?php echo $language["View_all_Ads"]; ?></a>
 								</div>
 								<div class="clearfix"></div>
 							</div>

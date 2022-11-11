@@ -1,15 +1,5 @@
 <?php
-  $servername = "localhost";
-  $username = "root";
-  $password = "";
-  $dbname = "jobboard";
-  // Create connection
-  $conn = new mysqli($servername, $username, $password, $dbname);
-  // Check connection    
-  if ($conn->connect_error) 
-  {
-      die("Connection went wrong: " . $conn->connect_error); 
-  } 
+  include 'inc/config.php';
      
     $from_data1 = addslashes ($_POST['username']);
     $from_data2 = addslashes ($_POST['password']);
@@ -18,7 +8,7 @@
 
 
 
-  $sql = "INSERT INTO admin_user (username, password) VALUES ('$from_data1', '$from_data2')";
+  $sql = "INSERT INTO admin (username, password) VALUES ('$from_data1', '$from_data2')";
   if ($conn->query($sql) === TRUE) 
   {    
       echo "Message show";

@@ -8,7 +8,7 @@
                      <?php 
                 if (isset($_GET['delid'])) {
                   $did = $_GET['delid'];
-                  $query = "DELETE FROM  admin_user WHERE id='$did'";
+                  $query = "DELETE FROM  admin WHERE id='$did'";
                    $db-> delete($query);
                 }
                
@@ -31,7 +31,7 @@
 
                         <?php 
 
-                        $query = "select * from admin_user order by id desc";
+                        $query = "select * from admin order by id desc";
                         $contact = $db->select($query);
                         if ($contact) {
                             $i=0;
@@ -59,7 +59,7 @@
         </div>
         <div class="clear">
         </div>
-    </div>
+    
 <?php include 'inc/foter.php'; ?>  
 
 <script type="text/javascript">

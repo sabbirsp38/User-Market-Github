@@ -21,7 +21,7 @@
 				<div class="container">
 				<!-- slider -->
 				<div class="trend-ads">
-					<h2>Trending Ads</h2>
+					<h2><?php echo $language["Trending_Ads"]; ?> </h2>
 							<ul id="flexiselDemo3">
 								<li>
 
@@ -108,13 +108,13 @@ LIMIT 4;";
 			</div>
 			<!-- //slider -->				
 			</div>
-			<div class="mobile-app">
+			<!-- <div class="mobile-app">
 				<div class="container">
 					<div class="col-md-5 app-left">
 						<a href="mobileapp.php"><img src="images/app.png" alt=""></a>
 					</div>
 					<div class="col-md-7 app-right">
-						<h3>Resale App is the <span>Easiest</span> way for Selling and buying second-hand goods</h3>
+						<h3><?php echo $language["LIST_TITLE"]; ?> </h3>
 						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam auctor Sed bibendum varius euismod. Integer eget turpis sit amet lorem rutrum ullamcorper sed sed dui. vestibulum odio at elementum. Suspendisse et condimentum nibh.</p>
 						<div class="app-buttons">
 							<div class="app-button">
@@ -128,7 +128,7 @@ LIMIT 4;";
 					</div>
 					<div class="clearfix"></div>
 				</div>
-			</div>
+			</div> -->
 		</div>
 
 

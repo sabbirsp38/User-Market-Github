@@ -145,13 +145,13 @@ var elem=$('#container ul');
       <div class="header-right">
         <ul class="hader-list-itam">
           <li>
-            <a class="account" href="profile/index.php">My Account</a>
+            <a class="account" href="profile/index.php"><?php echo $language["My_Account"]; ?></a>
           </li>
           <li>
 
             <div class="dropdown lang-dropdown">
               <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                Select language
+                <?php echo $language["Select_language"]; ?>
               </button>
               <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
                 <a class="dropdown-item" href="?lang=en"
@@ -160,7 +160,7 @@ var elem=$('#container ul');
                
                 <a class="dropdown-item"
             href="?lang=de" <?php if($lang == 'de'){?>
-            style="color: #ff9900;" <?php } ?>>Deutsche</a>
+            style="color: #ff9900;" <?php } ?>>Duits</a>
               </div>
             </div>
 
