@@ -7,7 +7,7 @@
 
  <div class="grid_10">
             <div class="box round first grid">
-                <h2>User List</h2>
+                <h2><?php echo $language["View_Sub_Category"]; ?></h2>
                 <div class="block"> 
 
                      <?php 
@@ -27,10 +27,10 @@
                     <thead>
                         <tr class="odd gradeX">
                             <td width="10%">SN</td>
-                            <td width="25%">Name in english</td>
-                            <td width="25%">Name in Garman</td>
-                            <td width="30%">Parent category</td>
-                            <th width="10%">Delete</th>
+                            <td width="25%"><?php echo $language["Name_in_english"]; ?></td>
+                            <td width="25%"><?php echo $language["Name_in_German"]; ?></td>
+                            <td width="30%"><?php echo $language["Parent_category"]; ?></td>
+                            <th width="10%"><?php echo $language["Delete"]; ?></th>
                         </tr>
                     </thead>
                     <tbody>
@@ -78,9 +78,9 @@
                           <?php }} ?>
 
                             </td>
-                            <td><a class="btn btn-red CoustRead02 " onclick="return confirm('Are you sure to DELETE!');" 
+                            <td><a class="btn btn-red CoustRead02 " onclick="return confirm('<?php echo $language["Are_you_sure_to_DELETE"]; ?>!');" 
 
-                         href="?delid=<?php echo $result['id']; ?>  ">Delete</a></td>
+                         href="?delid=<?php echo $result['id']; ?>  "><?php echo $language["Delete"]; ?></a></td>
                             
                         </tr>
                         <?php  }} ?>

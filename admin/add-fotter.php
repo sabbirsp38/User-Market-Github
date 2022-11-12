@@ -8,30 +8,30 @@
        <div class="grid_10">
         
             <div class="box round first grid">
-                <h2>Add Fotter</h2>
+                <h2><?php echo $language["Add_Footer_about_section"]; ?></h2>
                 <div class="block">               
                  <form action="DB-add-footer.php" method="post" enctype="multipart/form-data">
                     <table class="form">
                        
                         <tr>
                             <td>
-                                <label>Footer section title in english</label>
+                                <label><?php echo $language["Footer_section_title_in_english"]; ?></label>
                             </td>
                             <td>
-                                <input type="text" placeholder="Footer section title in english" class="medium" name="en_titile" />
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>
-                                <label>Footer section title in Garman</label>
-                            </td>
-                            <td>
-                                <input type="text" placeholder="Footer section title in Garman" class="medium" name="de_titile" />
+                                <input type="text" placeholder="<?php echo $language["Footer_section_title_in_english"]; ?>" class="medium" name="en_titile" />
                             </td>
                         </tr>
                         <tr>
                             <td>
-                                <label>Footer section Description in english</label>
+                                <label><?php echo $language["Footer_section_title_in_German"]; ?></label>
+                            </td>
+                            <td>
+                                <input type="text" placeholder="<?php echo $language["Footer_section_title_in_German"]; ?>" class="medium" name="de_titile" />
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <label><?php echo $language["Footer_section_Description_in_english"]; ?></label>
                             </td>
                             <td>
                                   <textarea name="en_dec" class="tinymce"></textarea>
@@ -39,7 +39,7 @@
                         </tr>
                         <tr>
                             <td>
-                                <label>Footer section Description in Garman</label>
+                                <label><?php echo $language["Footer_section_Description_in_German"]; ?></label>
                             </td>
                             <td>
                                   <textarea name="de_dec" class="tinymce"></textarea>

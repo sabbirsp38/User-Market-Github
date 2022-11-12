@@ -168,7 +168,7 @@ var elem=$('#container ul');
       <div class="header-right">
         <ul class="hader-list-itam">
           <li>
-            <a class="account" href="profile/index.php">My Account</a>
+            <a class="account" href="index.php">My Account</a>
           </li>
           <li>
 

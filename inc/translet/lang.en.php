@@ -93,9 +93,9 @@ $language['Zip_Code'] = 'Zip Code';
 $language['Add_Location'] = 'Add Location';
 $language['City_in_english'] = 'City in english';
 $language['City_in_German'] = 'City in German';
-$language['Country_in_englis'] = 'Country in english';
+$language['Country_in_english'] = 'Country in english';
 $language['Country_in_German'] = 'Country in German';
-$language['Zip_Code_in_engli'] = 'Zip Code in english';
+$language['Zip_Code_in_english'] = 'Zip Code in english';
 $language['Zip_Code_in_German'] = 'Zip Code in German';
 $language['View_Location'] = 'View Location';
 $language['Add_Category'] = 'Add Category';
@@ -141,5 +141,59 @@ $language['Meta_Description_in_German'] = 'Meta Description in German';
 $language['Meta_Keword_in_english'] = 'Meta Keword in english';
 $language['Meta_Keword_in_German'] = 'Meta Keword in German';
 $language['Add_Code'] = 'Add Code(Please Start and End With Script Tag)';
+
+$language['Post_an_Ad'] = 'Post an Ad';
+$language['Ad_Title'] = 'Ad Title';
+$language['Category'] = 'Category';
+$language['Select_Category'] = 'Select Category';
+$language['Sub_Category'] = 'Sub Category';
+$language['Select_Sub_Category'] = 'Select Sub Category';
+$language['Price'] = 'Price';
+$language['Condition'] = 'Condition';
+$language['Item_Type'] = 'Item_Type';
+$language['Ad_Description'] = 'Ad_Description';
+$language['Photos_For_Your_Ad'] = 'Photos For Your Ad';
+$language['2nd_Photos_For_Your_Ad_Optional'] = '2nd Photos For Your Ad Optional';
+$language['3rd_Photos_For_Your_Ad_Optional'] = '3rd Photos For Your Ad Optional';
+$language['4th_Photos_For_Your_Ad_Optional'] = '4th Photos For Your Ad Optional';
+$language['Your_Mobile_No'] = 'Your Mobile No';
+$language['By_clicking'] = 'By clicking';
+$language['post_Button'] = 'post Button';
+$language['you_accept_our'] = 'you accept our';
+$language['Terms_of_Use'] = 'Terms of Use';
+$language['and'] = 'and';
+$language['Privacy_Policy'] = 'Privacy Policy';
+$language['Post'] = 'Post';
+
+ $language["Edit_This_Ad"]= 'Edit This Ad';
+ $language["Edit"]= 'Edit';
+ $language["Hello_Admin"]= 'Hello Admin';
+ $language["Logout"]= 'Logout';
+ $language["Profile_List"]= 'Profile List';
+ $language["Location_List"]= 'Location List';
+ $language["Add_Catagory"]= 'Add Catagory';
+ $language["View_Catagory"]= 'View Catagory';
+ $language["Add_Sub_Catagory"]= 'Add Sub Catagory';
+ $language["View_Sub_Catagory"]= 'View Sub Catagory';
+ $language["Add_Meta_Tag"]= 'Add Meta Tag';
+ $language["View_Meta_Tag"]= 'View Meta Tag';
+ $language["Add_Snippet"]= 'Add Snippet';
+ $language["View_Snippet"]= 'View Snippet';
+ $language["Add_Admin"]= 'Add Admin';
+ $language["Admin_List"]= 'Admin List';
+ $language["User_List"]= 'User List';
+ $language["Ads_List"]= 'Ads List';
+ $language["See_Ads"]= 'See Ads';
+ $language["Save"]= 'Save';
+ $language['View_Sub_Category'] = 'View Sub Category';
+ $language["View_SEO_Information"]= 'View SEO Information';
+ $language["Use_comma_separator_to_add_multiple_keyword"]= 'Use , comma separator to add multiple keyword';
+ $language["Add_SEO_Information"]= 'Add Sub Category';
+ $language["View_snipet_code"]= 'View snipet code';
+ $language["snipet_code"]= 'Snipet code';
+ $language["Add_snipet_code"]= 'Add snipet code';
+
+
+
 
 ?>

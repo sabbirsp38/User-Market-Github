@@ -38,7 +38,7 @@ require_once ("../inc/translet/lang." . $lang . ".php");
 <html>
 <head>
    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
-    <title>Add New Post | Admin</title>
+    <title> Admin</title>
     <link rel="stylesheet" type="text/css" href="css/reset.css" media="screen" />
     <link rel="stylesheet" type="text/css" href="css/text.css" media="screen" />
     <link rel="stylesheet" type="text/css" href="css/grid.css" media="screen" />
@@ -104,11 +104,11 @@ require_once ("../inc/translet/lang." . $lang . ".php");
             <div id="branding">
                 <div class="floatleft logo">
                     <img src="img/livelogo.png" alt="Logo" />
-				</div>
-				<div class="floatleft middle">
-					<h1>User Markt</h1>
-					
-				</div>
+                </div>
+                <div class="floatleft middle">
+                    <h1>User Markt</h1>
+                    
+                </div>
                 <div class="floatright">
                     <div class="floatleft">
                         <img src="img/img-profile.jpg" alt="Profile Pic" /></div>
@@ -119,9 +119,9 @@ require_once ("../inc/translet/lang." . $lang . ".php");
                          ?>
                     <div class="floatleft marginleft10">
                         <ul class="inline-ul floatleft">
-                            <li>Hello Admin</li>
+                            <li><?php echo $language["Hello_Admin"]; ?></li>
 
-                            <li><a href="?action=logout">Logout</a></li>
+                            <li><a href="?action=logout"><?php echo $language["Logout"]; ?></a></li>
                         </ul>
                     </div>
                 </div>
@@ -133,7 +133,19 @@ require_once ("../inc/translet/lang." . $lang . ".php");
         </div>
         <div class="grid_12">
             <ul class="nav main">
-				<li class="ic-grid-tables"><a href="subscribers.php"><span>subscribers</span></a></li>
-                <li class="ic-charts"><a href="../index.php"><span>Visit Website</span></a></li>
+                
+                <li class="ic-charts">
+                    <a href="../index.php"><span><?php echo $language["Visit_Website"]; ?></span></a>
+                </li>
+                <li class="ic-grid-tables">
+                    <a  href="?lang=en"
+                    <?php if($lang == 'en'){?> style="color: #ff9900;"
+                    <?php } ?>>English</a>
+                </li>
+                <li class="ic-grid-tables">
+                     <a 
+                        href="?lang=de" <?php if($lang == 'de'){?>
+                        style="color: #ff9900;" <?php } ?>>Duits</a>
+                </li>
             </ul>
         </div>

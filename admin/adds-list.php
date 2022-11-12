@@ -7,7 +7,7 @@
 
  <div class="grid_10">
             <div class="box round first grid">
-                <h2>User List</h2>
+                <h2><?php echo $language["Ads_List"]; ?></h2>
                 <div class="block"> 
 
                      <?php 
@@ -27,10 +27,10 @@
                     <thead>
                         <tr class="odd gradeX">
                             <td width="10%">SN</td>
-                            <td width="30%">Job Title</td>
-                            <td width="30%">Company Name</td>
-                            <td width="15%">See Job</td>
-                            <th width="15%">Delete</th>
+                            <td width="30%"><?php echo $language["Ad_Title"]; ?></td>
+                            <td width="30%"><?php echo $language["Price"]; ?></td>
+                            <td width="15%"><?php echo $language["See_Ads"]; ?></td>
+                            <th width="15%"><?php echo $language["Delete"]; ?></th>
                         </tr>
                     </thead>
                     <tbody>
@@ -51,10 +51,10 @@
                             <td><?php echo $i;  ?></td>
                             <td><?php echo $result['P_title']; ?></td>
                             <td><?php echo $result['p_price']; ?></td>
-                            <td><a  class="btn btn-green CoustRead01 " href="../single.php? $id=<?php echo $result['id']; ?>">See Adds</a></td>
-                            <td><a class="btn btn-red CoustRead02 " onclick="return confirm('Are you sure to DELETE!');" 
+                            <td><a  class="btn btn-green CoustRead01 " href="../single.php? $id=<?php echo $result['id']; ?>"><?php echo $language["See_Ads"]; ?></a></td>
+                            <td><a class="btn btn-red CoustRead02 " onclick="return confirm('<?php echo $language["Are_you_sure_to_DELETE"]; ?>!');" 
 
-                         href="?delid=<?php echo $result['id']; ?>  ">Delete</a></td>
+                         href="?delid=<?php echo $result['id']; ?>  "><?php echo $language["Delete"]; ?></a></td>
                             
                         </tr>
                         <?php  }} ?>

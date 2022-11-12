@@ -87,9 +87,9 @@ require_once ("../inc/translet/lang." . $lang . ".php");
                          ?>
                     <div class="floatleft marginleft10">
                         <ul class="inline-ul floatleft">
-                            <li>Hello Admin</li>
+                            <li><?php echo $language["Hello_Admin"]; ?></li>
 
-                            <li><a href="?action=logout">Logout</a></li>
+                            <li><a href="?action=logout"><?php echo $language["Logout"]; ?></a></li>
                         </ul>
                     </div>
                 </div>
@@ -101,7 +101,19 @@ require_once ("../inc/translet/lang." . $lang . ".php");
         </div>
         <div class="grid_12">
             <ul class="nav main">
-				<li class="ic-grid-tables"><a href="subscribers.php"><span>subscribers</span></a></li>
-                <li class="ic-charts"><a href="../index.php"><span>Visit Website</span></a></li>
+				
+                <li class="ic-charts">
+                    <a href="../index.php"><span><?php echo $language["Visit_Website"]; ?></span></a>
+                </li>
+                <li class="ic-grid-tables">
+                    <a  href="?lang=en"
+                    <?php if($lang == 'en'){?> style="color: #ff9900;"
+                    <?php } ?>>English</a>
+                </li>
+                <li class="ic-grid-tables">
+                     <a 
+                        href="?lang=de" <?php if($lang == 'de'){?>
+                        style="color: #ff9900;" <?php } ?>>Duits</a>
+                </li>
             </ul>
         </div>

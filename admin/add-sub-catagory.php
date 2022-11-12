@@ -8,36 +8,36 @@
        <div class="grid_10">
         
             <div class="box round first grid">
-                <h2>Add Location</h2>
+                <h2><?php echo $language["Add_Sub_Category"]; ?></h2>
                 <div class="block">               
                  <form action="DB-add-sub-category.php" method="post" enctype="multipart/form-data">
                     <table class="form">
                        
                         <tr>
                             <td>
-                                <label>Name in english</label>
+                                <label><?php echo $language["Name_in_english"]; ?></label>
                             </td>
                             <td>
-                                <input type="text" placeholder="City in english..." class="medium" name="en_name" />
+                                <input type="text" placeholder="<?php echo $language["Name_in_english"]; ?>..." class="medium" name="en_name" />
                             </td>
                         </tr>
                         <tr>
                             <td>
-                                <label>Name in Garman</label>
+                                <label><?php echo $language["Name_in_German"]; ?></label>
                             </td>
                             <td>
-                                <input type="text" placeholder="City in Garman..." class="medium" name="    de_name" />
+                                <input type="text" placeholder="<?php echo $language["Name_in_German"]; ?>..." class="medium" name="    de_name" />
                             </td>
                         </tr>
 
 
                          <tr>
                             <td>
-                                <label>Parent category</label>
+                                <label><?php echo $language["Parent_category"]; ?></label>
                             </td>
                             <td>
                                 <select class="" name="parent_cat" onchange="check(this.value)">
-                                <option>Select Category</option>
+                                <option><?php echo $language["Select_Category"]; ?></option>
                                   <?php
                                          $query = "select * from category";
                                         $post = $db->select($query);
@@ -61,7 +61,7 @@
                         <tr>
                             <td></td>
                             <td>
-                                <input type="submit" name="submit" Value="Save" />
+                                <input type="submit" name="submit" Value="<?php echo $language["Save"]; ?>" />
                             </td>
                         </tr>
                     </table>

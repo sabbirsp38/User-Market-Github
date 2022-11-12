@@ -7,7 +7,7 @@
 
  <div class="grid_10">
             <div class="box round first grid">
-                <h2>User List</h2>
+                <h2><?php echo $language["Banner_List"]; ?></h2>
                 <div class="block"> 
 
                     
@@ -19,17 +19,17 @@
                     <thead>
                         <tr class="odd gradeX">
                             <td width="5%">SN</td>
-                            <td width="10%">English Catagoty</td>
-                            <td width="10%">Garman Catagoty</td>
-                            <td width="10%">English Banner Title</td>
-                            <td width="10%">Garman Banner Title</td>
-                            <td width="10%">English Banner Discription</td>
-                            <td width="10%">Garman Banner Discription</td>
-                            <td width="10%">English Button Text</td>
-                            <td width="10%">Garman Button Text</td>
-                            <td width="10%">Button URL</td>
-                            <td width="10%">Banner Image</td>
-                            <th width="5%">Delete</th>
+                            <td width="10%"><?php echo $language["Catagoty"]; ?></td>
+                            <td width="10%"><?php echo $language["Catagoty"]; ?></td>
+                            <td width="10%"><?php echo $language["English_Banner_Title"]; ?></td>
+                            <td width="10%"><?php echo $language["German_Banner_Title"]; ?></td>
+                            <td width="10%"><?php echo $language["English_Banner_Discription"]; ?></td>
+                            <td width="10%"><?php echo $language["German_Banner_Discription"]; ?></td>
+                            <td width="10%"><?php echo $language["English_Button_Text"]; ?></td>
+                            <td width="10%"><?php echo $language["German_Button_Text"]; ?></td>
+                            <td width="10%"><?php echo $language["Button_URL"]; ?></td>
+                            <td width="10%"><?php echo $language["Banner_Image"]; ?></td>
+                            <th width="5%"><?php echo $language["Delete"]; ?></th>
                         </tr>
                     </thead>
                     <tbody>
@@ -61,9 +61,9 @@
                             <td><img style="max-width: 150px; max-height: 150px;" src="../uploads/<?php echo $result['banner_img']; ?>"></td>
 
 
-                            <td><a class="btn btn-red CoustRead02 " onclick="return confirm('Are you sure to DELETE!');" 
+                            <td><a class="btn btn-red CoustRead02 " onclick="return confirm('<?php echo $language["Are_you_sure_to_DELETE"]; ?>!');" 
 
-                         href="DB-removed-banner.php? $id=<?php echo $result['id']; ?>   ">Delete</a></td>
+                         href="DB-removed-banner.php? $id=<?php echo $result['id']; ?>   "><?php echo $language["Delete"]; ?></a></td>
                             
                         </tr>
                         <?php  }} ?>

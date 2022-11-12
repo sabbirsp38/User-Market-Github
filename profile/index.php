@@ -57,22 +57,22 @@ $fm = new Formet();
 				<div class="graphs">
 					<div class="sign-in-form">
 						<div class="sign-in-form-top">
-							<h1>Log in</h1>
+							<h1><?php echo $language["Log_in"]; ?></h1>
 						</div>
 						<div class="signin">
 							<div class="signin-rit">
 								<?php if ($msg != "") echo $msg . "<br><br>" ?>
 							</div>
 							<form method="post" action="index.php">
-								<input class="form-control" name="email" type="email" placeholder="Email..."><br>
-								<input class="form-control" name="password" type="password" placeholder="Password..."><br>
-								<input class=" loginbut" type="submit" name="submit" value="Log In">
+								<input class="form-control" name="email" type="email" placeholder="<?php echo $language["Email"]; ?>..."><br>
+								<input class="form-control" name="password" type="password" placeholder="<?php echo $language["Password"]; ?>..."><br>
+								<input class=" loginbut" type="submit" name="submit" value="<?php echo $language["Log_in"]; ?>">
 							</form>	 
 						</div>
 						<div class="new_people">
-							<h2>For New People</h2>
+							<h2><?php echo $language["For_New_People"]; ?></h2>
 							<p></p>
-							<a href="../register.php">Register Now!</a>
+							<a href="../register.php"><?php echo $language["Register_Now"]; ?></a>
 						</div>
 					</div>
 				</div>

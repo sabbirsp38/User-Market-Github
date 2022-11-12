@@ -7,7 +7,7 @@
 
  <div class="grid_10">
             <div class="box round first grid">
-                <h2>User List</h2>
+                <h2><?php echo $language["View_snipet_code"]; ?></h2>
                 <div class="block"> 
 
                      <?php 
@@ -27,8 +27,8 @@
                     <thead>
                         <tr class="odd gradeX">
                             <td width="20%">SN</td>
-                            <td width="60%">snipet code</td>
-                            <th width="20%">Delete</th>
+                            <td width="60%"><?php echo $language["snipet_code"]; ?></td>
+                            <th width="20%"><?php echo $language["Delete"]; ?></th>
                         </tr>
                     </thead>
                     <tbody>
@@ -49,9 +49,9 @@
                             <td><?php echo $i;  ?></td>
                             <td><code><?php echo $result['snipet_code']; ?></code></td>
                             
-                            <td><a class="btn btn-red CoustRead02 " onclick="return confirm('Are you sure to DELETE!');" 
+                            <td><a class="btn btn-red CoustRead02 " onclick="return confirm('<?php echo $language["Are_you_sure_to_DELETE"]; ?>!');" 
 
-                         href="?delid=<?php echo $result['id']; ?>  ">Delete</a></td>
+                         href="?delid=<?php echo $result['id']; ?>  "><?php echo $language["Delete"]; ?></a></td>
                             
                         </tr>
                         <?php  }} ?>

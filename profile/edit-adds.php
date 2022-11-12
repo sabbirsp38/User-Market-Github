@@ -2,13 +2,6 @@
 
 
 
-	<div class="banner text-center">
-	  <div class="container">    
-			<h1>Sell or Advertise   <span class="segment-heading">    anything online </span> with Resale</h1>
-			<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry</p>
-			<a href="post-ad.html">Post Free Ad</a>
-	  </div>
-	</div>
 
   <?php
 
@@ -30,7 +23,7 @@
 	<!-- Submit Ad -->
 	<div class="submit-ad main-grid-border">
 		<div class="container">
-			<h2 class="head">Post an Ad</h2>
+			<h2 class="head"><?php echo $language["Edit_This_Ad"]; ?></h2>
 			<div class="post-ad-form">
 				<form action="dbconncet_editeadds.php? $id=<?php echo $result['id']; ?>" class="job-post-form" method="post"  data-provide="validation" data-disable="false" method="post" autocomplete="off" enctype="multipart/form-data" >
 
@@ -57,7 +50,7 @@
 
 
 
-					<label>Ad Title <span>*</span></label>
+					<label><?php echo $language["Ad_Title"]; ?> <span>*</span></label>
 					<input  name="P_title" type="text" class="phone" value="<?php echo $result['P_title']; ?>">
 					<div class="clearfix"></div>
 
@@ -66,9 +59,9 @@
 
 
                                 <div class="form-group">
-                                    <label for="CATEGORY-DROPDOWN">Category</label>
+                                    <label for="CATEGORY-DROPDOWN"><?php echo $language["Category"]; ?></label>
                                     <select class="form-control" id="category-dropdown" name="P_catagory">
-                                        <option value="">Select Category</option>
+                                        <option value=""><?php echo $language["Select_Category"]; ?></option>
                                         <?php
                                         $result = mysqli_query($conn, "SELECT * FROM category ");
                                         while ($row = mysqli_fetch_array($result)) {
@@ -80,9 +73,9 @@
                                     </select>
                                 </div>
                                 <div class="form-group">
-                                    <label for="SUBCATEGORY">Sub Category</label>
+                                    <label for="SUBCATEGORY"><?php echo $language["Sub_Category"]; ?></label>
                                     <select class="form-control" id="sub-category-dropdown" name="p_sub_catagory">
-                                        <option value="">Select Sub Category</option>
+                                        <option value=""><?php echo $language["Select_Sub_Category"]; ?></option>
                                     </select>
                                 </div>
 
@@ -107,27 +100,27 @@
                       $result= $post -> fetch_assoc()
                         ?>
 
-					<label>Price <span></span></label>
+					<label> <?php echo $language["Price"]; ?><span></span></label>
 					<input name="p_price" type="text" class="phone" value="<?php echo $result['p_price']; ?>">
 					<div class="clearfix"></div>
 
-					<label>Condition <span></span></label>
+					<label> <?php echo $language["Condition"]; ?><span></span></label>
 					<input name="p_condition" type="text" class="phone" value="<?php echo $result['p_condition']; ?>">
 					<div class="clearfix"></div>
 
 
-					<label>Item Type <span></span></label>
+					<label><?php echo $language["Item_Type "]; ?><span></span></label>
 					<input name="P_item_type" type="text" class="phone" value="<?php echo $result['P_item_type']; ?>">
 					<div class="clearfix"></div>
 
 
 
 
-					<label>Ad Description <span>*</span></label>
+					<label><?php echo $language["Ad_Description"]; ?><span>*</span></label>
 					<textarea name="p_decription" id="editor"   class="form-control tinymce" value=""><?php echo $result['p_decription']; ?></textarea>
 					<div class="clearfix"></div>
 				<div class="upload-ad-photos">
-				<label>Photos for your ad :</label>	
+				<label><?php echo $language["Photos_For_Your_Ad"]; ?>:</label>	
 					<div class="photos-upload-view">
 						<input name="P_imag1" type="file" class="phone" value="<?php echo $result['P_imag1']; ?>">
 					</div>
@@ -135,7 +128,7 @@
 						
 				</div>
 				<div class="upload-ad-photos">
-				<label>2nd Photos for your ad :(optional)</label>	
+				<label><?php echo $language["2nd_Photos_For_Your_Ad_Optional"]; ?></label>	
 					<div class="photos-upload-view">
 						<input name="P_imag2" type="file" class="phone"  value="<?php echo $result['P_imag2']; ?>">
 					</div>
@@ -143,7 +136,7 @@
 						
 				</div>
 				<div class="upload-ad-photos">
-				<label>3rd Photos for your ad :(optional)</label>	
+				<label><?php echo $language["3rd_Photos_For_Your_Ad_Optional"]; ?></label>	
 					<div class="photos-upload-view">
 						<input name="P_imag3" type="file" class="phone"  value="<?php echo $result['P_imag3']; ?>">
 					</div>
@@ -151,7 +144,7 @@
 						
 				</div>
 				<div class="upload-ad-photos">
-				<label>4th Photos for your ad :(optional)</label>	
+				<label><?php echo $language["4th_Photos_For_Your_Ad_Optional"]; ?></label>	
 					<div class="photos-upload-view">
 						<input name="P_imag4" type="file" class="phone"  value="<?php echo $result['P_imag4']; ?>">
 					</div>
@@ -161,12 +154,13 @@
 					<div class="personal-details">
 					
 						
-						<label>Your Mobile No <span>*</span></label>
+						<label><?php echo $language["Your_Mobile_No"]; ?><span>*</span></label>
 						<input name="p_contact_number" type="text" class="phone"  value="<?php echo $result['p_contact_number']; ?>">
 						<div class="clearfix"></div>
 					
-						<p class="post-terms">By clicking <strong>post Button</strong> you accept our <a href="terms.php" target="_blank">Terms of Use </a> and <a href="privacy.php" target="_blank">Privacy Policy</a></p>
-					<input type="submit" value="Post">					
+						<p class="post-terms"> <?php echo $language["By_clicking"]; ?><strong> Button<?php echo $language["post"]; ?></strong>  <?php echo $language["you_accept_our"]; ?><a href="terms.php" target="_blank"> <?php echo $language["Terms_of_Use"]; ?></a>  <?php echo $language["and"]; ?><a href="privacy.php" target="_blank"><?php echo $language["Privacy_Policy"]; ?></a></p>
+                    <input type="submit" value="<?php echo $language["Post"]; ?>"> 
+					<input type="submit" value="<?php echo $language["Edit"]; ?>">					
 					<div class="clearfix"></div>
 					</form>
 					</div>

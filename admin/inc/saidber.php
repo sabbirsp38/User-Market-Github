@@ -4,61 +4,60 @@
             <div class="box sidemenu">
                 <div class="block" id="section-menu">
                     <ul class="section menu">
-                        <li><a class="menuitem">Adds</a>
+                        <li><a class="menuitem"><?php echo $language["Adds"]; ?></a>
                             <ul class="submenu">
-                                <li><a href="adds-list.php">Publish Job</a> </li>
+                                <li><a href="adds-list.php"><?php echo $language["Publish_Job"]; ?></a> </li>
                             </ul>
                         </li>
-                        <li><a class="menuitem">User Profile</a>
+                        <li><a class="menuitem"><?php echo $language["User_Profile"]; ?></a>
                             <ul class="submenu">
-                                <li><a href="addspubliser.php">Profile List</a> </li>
+                                <li><a href="addspubliser.php"><?php echo $language["Profile_List"]; ?></a> </li>
                             </ul>
                         </li>
                         
-                        <li><a class="menuitem">Location</a>
+                        <li><a class="menuitem"><?php echo $language["Location"]; ?></a>
                             <ul class="submenu">
-                                <li><a href="add-location.php">Add Location</a> </li>
-                                <li><a href="location-list.php">Location List</a> </li>
+                                <li><a href="add-location.php"><?php echo $language["Add_Location"]; ?></a> </li>
+                                <li><a href="location-list.php"><?php echo $language["Location_List"]; ?></a> </li>
                             </ul>
                         </li>
-                        <li><a class="menuitem">Catagory</a>
+                        <li><a class="menuitem"><?php echo $language["Catagory"]; ?></a>
                             <ul class="submenu">
-                                <li><a href="add-catagory.php">Add Catagory</a> </li>
-                                <li><a href="view-catagory.php">View Catagory</a> </li> 
+                                <li><a href="add-catagory.php"><?php echo $language["Add_Catagory"]; ?></a> </li>
+                                <li><a href="view-catagory.php"><?php echo $language["View_Catagory"]; ?></a> </li> 
                             </ul>
                         </li>
-                        <li><a class="menuitem">Sub Catagory</a>
+                        <li><a class="menuitem"><?php echo $language["Sub_Catagory"]; ?></a>
                             <ul class="submenu">
-                                <li><a href="add-sub-catagory.php">Add Sub Catagory</a> </li>
-                                <li><a href="view-sub-catagory.php">View Sub Catagory</a> </li> 
+                                <li><a href="add-sub-catagory.php"><?php echo $language["Add_Sub_Catagory"]; ?></a> </li>
+                                <li><a href="view-sub-catagory.php"><?php echo $language["View_Sub_Catagory"]; ?></a> </li> 
                             </ul>
                         </li>
-                        <li><a class="menuitem">Page Settings</a>
+                        <li><a class="menuitem"><?php echo $language["Page_Settings"]; ?></a>
                             <ul class="submenu">
-                                <li><a href="add-banner.php">Add Banner</a> </li>
-                                <li><a href="view-banner.php">Banner List</a> </li>
-                                <li><a href="add-fotter.php">Add Footer about section</a> </li>
-                                <li><a href="view-fotter.php">View Footer about section</a> </li>
-                                <li><a href="add-contact-info.php">Add contact info</a> </li>
-                                <li><a href="view-contact-info.php">View contact info</a> </li>
-                                <li><a href="add-social-info.php">Add social info</a> </li>
-                                <li><a href="view-social-info.php">View social info</a> </li>
+                                <li><a href="add-banner.php"><?php echo $language["Add_Banner"]; ?></a> </li>
+                                <li><a href="view-banner.php"><?php echo $language["Banner_List"]; ?></a> </li>
+                                <li><a href="add-fotter.php"><?php echo $language["Add_Footer_about_section"]; ?></a> </li>
+                                <li><a href="view-fotter.php"><?php echo $language["View_Footer_about_section"]; ?></a> </li>
+                                <li><a href="add-contact-info.php"><?php echo $language["Add_contact_info"]; ?></a> </li>
+                                <li><a href="view-contact-info.php"><?php echo $language["View_contact_info"]; ?></a> </li>
+                                
                             </ul>
                             
                         </li>
-                        <li><a class="menuitem">SEO Settings</a>
+                        <li><a class="menuitem"><?php echo $language["SEO_Settings"]; ?></a>
                             <ul class="submenu">
-                                <li><a href="add-meta.php">Add Meta Tag</a> </li>
-                                <li><a href="view-meta.php">View Meta Tag</a> </li>
-                                 <li><a href="add-Snippet.php">Add Snippet</a> </li>
-                                <li><a href="view-Snippet.php">View Snippet</a> </li>
+                                <li><a href="add-meta.php"><?php echo $language["Add_Meta_Tag"]; ?></a> </li>
+                                <li><a href="view-meta.php"><?php echo $language["View_Meta_Tag"]; ?></a> </li>
+                                 <li><a href="add-Snippet.php"><?php echo $language["Add_Snippet"]; ?></a> </li>
+                                <li><a href="view-Snippet.php"><?php echo $language["View_Snippet"]; ?></a> </li>
                             </ul>
                         
                         </li>
-                        <li><a class="menuitem">Admin Option</a>
+                        <li><a class="menuitem"><?php echo $language["Admin_Option"]; ?></a>
                             <ul class="submenu">
-                                <li><a href="adduser.php">Add Admin</a> </li>
-                                <li><a href="userlist.php">Admin List</a> </li>
+                                <li><a href="adduser.php"><?php echo $language["Add_Admin"]; ?></a> </li>
+                                <li><a href="userlist.php"><?php echo $language["Admin_List"]; ?></a> </li>
                             </ul>
                         </li>
                         

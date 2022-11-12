@@ -8,57 +8,57 @@
        <div class="grid_10">
         
             <div class="box round first grid">
-                <h2>Add Location</h2>
+                <h2><?php echo $language["Add_Location"]; ?></h2>
                 <div class="block">               
                  <form action="DB-add-location.php" method="post" enctype="multipart/form-data">
                     <table class="form">
                        
                         <tr>
                             <td>
-                                <label>City in english</label>
+                                <label><?php echo $language["City_in_english"]; ?></label>
                             </td>
                             <td>
-                                <input type="text" placeholder="City in english..." class="medium" name="en_city" />
+                                <input type="text" placeholder="<?php echo $language["City_in_english"]; ?>" class="medium" name="en_city" />
                             </td>
                         </tr>
                         <tr>
                             <td>
-                                <label>City in Garman</label>
+                                <label><?php echo $language["City_in_German"]; ?></label>
                             </td>
                             <td>
-                                <input type="text" placeholder="City in Garman..." class="medium" name="de_city" />
+                                <input type="text" placeholder="<?php echo $language["City_in_German"]; ?>" class="medium" name="de_city" />
                             </td>
                         </tr>
                          <tr>
                             <td>
-                                <label>Country in english</label>
+                                <label><?php echo $language["Country_in_english"]; ?></label>
                             </td>
                             <td>
-                                <input type="text" placeholder="Country in english..." class="medium" name="en_country" />
+                                <input type="text" placeholder="<?php echo $language["Country_in_english"]; ?>" class="medium" name="en_country" />
                             </td>
                         </tr>
                         <tr>
                             <td>
-                                <label>Country in Garman</label>
+                                <label><?php echo $language["Country_in_German"]; ?></label>
                             </td>
                             <td>
-                                <input type="text" placeholder="Country in Garman..." class="medium" name="de_country" />
+                                <input type="text" placeholder="<?php echo $language["Country_in_German"]; ?>" class="medium" name="de_country" />
                             </td>
                         </tr>
                          <tr>
                             <td>
-                                <label>Zip Code in english</label>
+                                <label><?php echo $language["Zip_Code_in_english"]; ?></label>
                             </td>
                             <td>
-                                <input type="text" placeholder="Zip Code in english..." class="medium" name="en_zip_code" />
+                                <input type="text" placeholder="<?php echo $language["Zip_Code_in_english"]; ?>" class="medium" name="en_zip_code" />
                             </td>
                         </tr>
                         <tr>
                             <td>
-                                <label>Zip Code in Garman</label>
+                                <label><?php echo $language["Zip_Code_in_German"]; ?></label>
                             </td>
                             <td>
-                                <input type="text" placeholder="Zip Code in Garman..." class="medium" name="de_zip_code" />
+                                <input type="text" placeholder="<?php echo $language["Zip_Code_in_German"]; ?>" class="medium" name="de_zip_code" />
                             </td>
                         </tr>
                         
@@ -66,7 +66,7 @@
                         <tr>
                             <td></td>
                             <td>
-                                <input type="submit" name="submit" Value="Save" />
+                                <input type="submit" name="submit" Value="<?php echo $language["Save"]; ?>" />
                             </td>
                         </tr>
                     </table>

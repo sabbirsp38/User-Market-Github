@@ -3,7 +3,7 @@
 				
 			
 				<div class="featured-ads">
-					<h2 class="sear-head fer">Featured Ads</h2>
+					<h2 class="sear-head fer"><?php echo $language["Featured_Ads"]; ?></h2>
 
 
 

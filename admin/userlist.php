@@ -2,7 +2,7 @@
 <?php include 'inc/saidber.php'; ?> 
         <div class="grid_10">
             <div class="box round first grid">
-                <h2>User List</h2>
+                <h2><?php echo $language["User_List"]; ?></h2>
                 <div class="block"> 
 
                      <?php 
@@ -22,9 +22,9 @@
                     <thead>
                         <tr class="odd gradeX">
                             <td>SN</td>
-                            <td>User Name</td>
-                            <td>Password</td>
-                            <th>Delete</th>
+                            <td><?php echo $language["User_Name"]; ?></td>
+                            <td><?php echo $language["Password"]; ?></td>
+                            <th><?php echo $language["Delete"]; ?></th>
                         </tr>
                     </thead>
                     <tbody>
@@ -45,9 +45,9 @@
                             <td><?php echo $i;  ?></td>
                             <td><?php echo $result['username']; ?></td>
                             <td><?php echo $result['password']; ?></td>
-                            <td> <a onclick="return confirm('Are you sure to DELETE!');" 
+                            <td> <a onclick="return confirm('<?php echo $language["Are_you_sure_to_DELETE"]; ?>!');" 
 
-                         href="?delid=<?php echo $result['id']; ?> ?>  ">Delete</a></td>
+                         href="?delid=<?php echo $result['id']; ?> ?>  "><?php echo $language["Delete"]; ?></a></td>
                             
                         </tr>
                         <?php  }} ?>

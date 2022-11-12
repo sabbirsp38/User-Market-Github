@@ -60,7 +60,7 @@
 	<div class="container" style="margin:200px;">
 		<div class="row justify-content-center">
 			<div class="col-md-6 col-md-offset-3" align="center">
-				<center><h1>Create an account</h1></center>
+				<center><h1><?php echo $language["Create_an_account"]; ?></h1></center>
                  <center><p class="colrtext"><?php echo $language["Already_Have_Account"]; ?> <a href="profile/index.php"><?php echo $language["Log_in"]; ?></a></p></center>
 
 				<br><br>

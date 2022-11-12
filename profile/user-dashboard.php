@@ -15,7 +15,7 @@ if (isset($_GET['$uni_id'])) {
         <div class="row">
           <div class="col-md-6">
             <div class="breadcrumb-area">
-              <h1>Dashboard</h1>
+              <h1><?php echo $language["Dashboard"]; ?></h1>
               
             </div>
           </div>
@@ -47,7 +47,7 @@ if (isset($_GET['$uni_id'])) {
                          for ($i=0; $i < $get_drow; $i++) { 
                            $data = $sql->fetch_array();
                            $ii++; }  ?>
-                    <span>Total Ads Posted</span>
+                    <span><?php echo $language["Total_Ads_Posted"]; ?></span>
                      <h3><?php echo $ii;?></h3>
                   </div>
                 </div>
@@ -59,19 +59,19 @@ if (isset($_GET['$uni_id'])) {
       </div>
     </div>
 
-<center><h3>Your Ads</h3></center>
+<center><h3><?php echo $language["Your_Ads"]; ?></h3></center>
 
               <div class="dashboard-content-wrapper container">
                 <div class="manage-job-container">
                   <table class="table">
                     <thead>
                       <tr>
-                        <th>Ads Title</th>
-                        <th>Price</th>
-                        <th>Contact Number</th>
-                        <th>View Ads</th>
-                        <th class="action">Edit Ads</th>
-                        <th>Delete Ads</th>
+                        <th><?php echo $language["Ads_Title"]; ?></th>
+                        <th><?php echo $language["Price"]; ?></th>
+                        <th><?php echo $language["Contact_Number"]; ?></th>
+                        <th><?php echo $language["View_Ads"]; ?></th>
+                        <th class="action"><?php echo $language["Edit_Ads"]; ?></th>
+                        <th><?php echo $language["Delete_Ads"]; ?></th>
                       </tr>
                     </thead>
                     <tbody>
@@ -97,16 +97,16 @@ if (isset($_GET['$uni_id'])) {
                         <td class=""><?php echo $result['p_price']; ?></td>
                         <td class="status active"><?php echo $result['p_contact_number']; ?></td>
                         <td class="action">
-                          <a class="btn btn-success" href="../single.php? $id=<?php echo $result['id']; ?>" title="Preview">Preview</a>
+                          <a class="btn btn-success" href="../single.php? $id=<?php echo $result['id']; ?>" title="Preview"><?php echo $language["Preview"]; ?></a>
                           
                         </td>
                         <td class="application">
-                          <a class="btn btn-warning" href="edit-adds.php? $id=<?php echo $result['id']; ?>"  title="Edit">Edit Ads</a>
+                          <a class="btn btn-warning" href="edit-adds.php? $id=<?php echo $result['id']; ?>"  title="Edit"><?php echo $language["Edit_Ads"]; ?></a>
                          
 
                         </td>
                         <td class="application"> 
-                          <a class="btn btn-danger" href="?delid=<?php echo $result['id']; ?>" >Delet Ads</a>
+                          <a class="btn btn-danger" href="?delid=<?php echo $result['id']; ?>" ><?php echo $language["Delete_Ads"]; ?></a>
                         </td>
                       </tr>
                       </tr>

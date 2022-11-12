@@ -8,19 +8,19 @@
        <div class="grid_10">
         
             <div class="box round first grid">
-                <h2>Add Contact Info</h2>
+                <h2><?php echo $language["Add_snipet_code"]; ?></h2>
                 <div class="block">               
                  <form action="DB-add-snept.php" method="post" enctype="multipart/form-data">
                     <table class="form">
                        
                         <tr>
                             <td>
-                                <label>Add Code(Please Start and End With Script Tag) </label>
+                                <label><?php echo $language["Add_Code"]; ?></label>
                             </td>
                             <td>
                                 
                                 
-                                <input type="text" placeholder="snipet code" class="medium" name="snipet_code" />
+                                <input type="text" placeholder="<?php echo $language["Add_Code"]; ?>" class="medium" name="snipet_code" />
                             </td>
                         </tr>
                         
@@ -30,7 +30,7 @@
                         <tr>
                             
                             <td>
-                                <input type="submit" name="submit" Value="Save" />
+                                <input type="submit" name="submit" Value="<?php echo $language["Save"]; ?>" />
                             </td>
                         </tr>
                     </table>

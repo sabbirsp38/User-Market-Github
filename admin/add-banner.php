@@ -8,18 +8,18 @@
        <div class="grid_10">
         
             <div class="box round first grid">
-                <h2>Add Banner</h2>
+                <h2><?php echo $language["Add_Banner"]; ?></h2>
                 <div class="block">               
                  <form action="DB-banner.php" method="post" enctype="multipart/form-data">
                     <table class="form">
 
                         <tr>
                             <td>
-                                <label>Catagoty</label>
+                                <label><?php echo $language["Catagoty"]; ?></label>
                             </td>
                             <td>
                                 <select class="" name="cat_id" onchange="check(this.value)">
-                                <option>Select Category</option>
+                                <option><?php echo $language["Select_Category"]; ?></option>
                                   <?php
                                          $query = "select * from category";
                                         $post = $db->select($query);
@@ -40,66 +40,66 @@
                        
                         <tr>
                             <td>
-                                <label>English Banner Title</label>
+                                <label><?php echo $language["English_Banner_Title"]; ?></label>
                             </td>
                             <td>
-                                <input type="text" placeholder="City in english..." class="medium" name="en_banner_title" />
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>
-                                <label>Garman Banner Title</label>
-                            </td>
-                            <td>
-                                <input type="text" placeholder="City in english..." class="medium" name="de_banner_title" />
+                                <input type="text" placeholder="<?php echo $language["English_Banner_Title"]; ?>..." class="medium" name="en_banner_title" />
                             </td>
                         </tr>
                         <tr>
                             <td>
-                                <label>English Banner Discription</label>
+                                <label><?php echo $language["German_Banner_Title"]; ?></label>
                             </td>
                             <td>
-                                <input type="text" placeholder="City in Garman..." class="medium" name="    en_banner_dec" />
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>
-                                <label>Garman Banner Discription</label>
-                            </td>
-                            <td>
-                                <input type="text" placeholder="City in Garman..." class="medium" name="    de_banner_dec" />
+                                <input type="text" placeholder="<?php echo $language["German_Banner_Title"]; ?>..." class="medium" name="de_banner_title" />
                             </td>
                         </tr>
                         <tr>
                             <td>
-                                <label>English Button Text</label>
+                                <label><?php echo $language["English_Banner_Discription"]; ?></label>
                             </td>
                             <td>
-                                <input type="text" placeholder="City in Garman..." class="medium" name="    en_botton_text" />
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>
-                                <label>Garman Button Text</label>
-                            </td>
-                            <td>
-                                <input type="text" placeholder="City in Garman..." class="medium" name="    de_botton_text" />
+                                <input type="text" placeholder="<?php echo $language["English_Banner_Discription"]; ?>..." class="medium" name="    en_banner_dec" />
                             </td>
                         </tr>
                         <tr>
                             <td>
-                                <label>Button URL</label>
+                                <label><?php echo $language["German_Banner_Discription"]; ?></label>
                             </td>
                             <td>
-                                <input type="text" placeholder="City in Garman..." class="medium" name="    button_url" />
+                                <input type="text" placeholder="<?php echo $language["German_Banner_Discription"]; ?>..." class="medium" name="    de_banner_dec" />
                             </td>
                         </tr>
                         <tr>
                             <td>
-                                <label>Banner Image</label>
+                                <label><?php echo $language["English_Button_Text"]; ?></label>
                             </td>
                             <td>
-                                <input type="file" placeholder="City in Garman..." class="medium" name="    banner_img" />
+                                <input type="text" placeholder="<?php echo $language["English_Button_Text"]; ?>..." class="medium" name="    en_botton_text" />
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <label><?php echo $language["German_Button_Text"]; ?></label>
+                            </td>
+                            <td>
+                                <input type="text" placeholder="<?php echo $language["German_Button_Text"]; ?>..." class="medium" name="    de_botton_text" />
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <label><?php echo $language["Button_URL"]; ?></label>
+                            </td>
+                            <td>
+                                <input type="text" placeholder="<?php echo $language["Button_URL"]; ?>..." class="medium" name="    button_url" />
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <label><?php echo $language["Banner_Image"]; ?></label>
+                            </td>
+                            <td>
+                                <input type="file" placeholder="" class="medium" name="    banner_img" />
                             </td>
                         </tr>
 
@@ -111,7 +111,7 @@
                         <tr>
                             <td></td>
                             <td>
-                                <input type="submit" name="submit" Value="Save" />
+                                <input type="submit" name="submit" Value="<?php echo $language["Save"]; ?>" />
                             </td>
                         </tr>
                     </table>

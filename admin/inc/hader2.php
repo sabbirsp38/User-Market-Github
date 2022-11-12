@@ -12,6 +12,12 @@ $db = new Database();
 $fm = new Formet();
 $uni_id = $_SESSION['uni_id'];
 $con = new mysqli('localhost', 'root', '', 'usermarket');
+ // include language configuration file based on selected language
+$lang = "en";
+if (isset($_GET['lang'])) {
+    $lang = $_GET['lang'];
+}
+require_once ("../inc/translet/lang." . $lang . ".php");
  ?>
 
 <!doctype html>
