@@ -158,19 +158,61 @@ var elem=$('#container ul');
     });
   });
 </script>
+
+
+
+
+
+<!-- Load TinyMCE -->
+    <script src="../admin/js/tiny-mce/jquery.tinymce.js" type="text/javascript"></script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            setupTinyMCE();
+            setDatePicker('date-picker');
+            $('input[type="checkbox"]').fancybutton();
+            $('input[type="radio"]').fancybutton();
+        });
+    </script>
+        <script type="text/javascript">
+        $(document).ready(function () {
+            setupLeftMenu();
+            setSidebarHeight();
+        });
+    </script>
+    <!-- /TinyMCE -->
+    <style type="text/css">
+        #tinymce{font-size:15px !important;}
+    </style>
+
+
+
+
+
+
+
 </head>
 <body>
   <div class="header">
     <div class="container">
       <div class="logo">
-        <a href="../index.php"><span>User</span>Markt</a>
+         <a href="../index.php"><img class="logoimg" src="../images/Logo.png"></a>
       </div>
       <div class="header-right">
         <ul class="hader-list-itam">
           <li>
             <a class="account" href="index.php">My Account</a>
           </li>
-          <li>
+          
+
+          <?php 
+if (isset($_GET['action']) && $_GET['action']=="logout" ) {
+    Session::destroy();
+  }
+ ?>
+                      <li><a class="btn btn-secondary logout-but account" href="post-ad.php">Post Ads</a></li>
+                      <li><a class="btn btn-secondary logout-but account" href="?action=logout"><span class="ti-power-off"></span>Log Out</a></li>
+
+                      <li>
 
             <div class="dropdown lang-dropdown">
               <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -189,14 +231,6 @@ var elem=$('#container ul');
 
 
           </li>
-
-          <?php 
-if (isset($_GET['action']) && $_GET['action']=="logout" ) {
-    Session::destroy();
-  }
- ?>
-                      <li><a class="btn btn-secondary logout-but" href="post-ad.php">Post Ads</a></li>
-                      <li><a class="btn btn-secondary logout-but" href="?action=logout"><span class="ti-power-off"></span>Log Out</a></li>
         </ul>
       
 

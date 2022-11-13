@@ -2,7 +2,17 @@
 
 <?php //include '../inc/templect/baner.php'; ?> 
 
-
+ <script src="https://cdn.tiny.cloud/1/ypw059prsaulzsn55i6775socj31aif88y4ib2nyhb3aspe4/tinymce/6/tinymce.min.js" referrerpolicy="origin"></script>
+        
+       <script>
+          tinymce.init({
+            selector: 'textarea#editor',
+            skin: 'bootstrap',
+            plugins: 'lists, link, image, media',
+            toolbar: 'h1 h2 bold italic strikethrough blockquote bullist numlist backcolor | link image media | removeformat help',
+            menubar: false,
+            });
+</script>
 
 <!-- Submit Ad -->
     <div class="submit-ad main-grid-border">
@@ -93,7 +103,8 @@
 
 
                     <label><?php echo $language["Ad_Description"]; ?> <span>*</span></label>
-                    <textarea name="p_decription" id="editor"   class="form-control tinymce" placeholder="Write few lines about your product"></textarea>
+                    
+                    <textarea name="p_decription"   id="editor"></textarea>
                     <div class="clearfix"></div>
                 <div class="upload-ad-photos">
                 <label><?php echo $language["Photos_For_Your_Ad"]; ?>:</label> 
@@ -134,7 +145,7 @@
                         <input name="p_contact_number" type="text" class="phone" placeholder="">
                         <div class="clearfix"></div>
                     
-                        <p class="post-terms"> <?php echo $language["By_clicking"]; ?><strong> Button<?php echo $language["post"]; ?></strong>  <?php echo $language["you_accept_our"]; ?><a href="terms.php" target="_blank"> <?php echo $language["Terms_of_Use"]; ?></a>  <?php echo $language["and"]; ?><a href="privacy.php" target="_blank"><?php echo $language["Privacy_Policy"]; ?></a></p>
+                        <p class="post-terms"> <?php echo $language["By_clicking"]; ?><strong> <?php echo $language["post"]; ?> Button</strong>  <?php echo $language["you_accept_our"]; ?><a href="terms.php" target="_blank"> <?php echo $language["Terms_of_Use"]; ?></a>  <?php echo $language["and"]; ?><a href="privacy.php" target="_blank"><?php echo $language["Privacy_Policy"]; ?></a></p>
                     <input type="submit" value="<?php echo $language["Post"]; ?>">                  
                     <div class="clearfix"></div>
 
@@ -171,5 +182,11 @@
             });
         </script>
     
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.6.0/umd/popper.min.js" integrity="sha512-BmM0/BQlqh02wuK5Gz9yrbe7VyIVwOzD1o40yi1IsTjriX/NGF37NyXHfmFzIlMmoSIBXgqDiG1VNU6kB5dBbA==" crossorigin="anonymous"></script>
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+
 
 <?php include 'inc/foter.php'; ?> 

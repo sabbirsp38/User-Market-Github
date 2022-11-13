@@ -72,7 +72,7 @@
 					<div class="item-price">
 						<div class="product-price">
 							<p class="p-price"><?php echo $language["Price"]; ?></p>
-							<h3 class="rate">$ <?php echo $result['p_price']; ?></h3>
+							<h3 class="rate">€ <?php echo $result['p_price']; ?></h3>
 							<div class="clearfix"></div>
 						</div>
 						<div class="condition">
@@ -91,18 +91,18 @@
 						<p><i class="glyphicon glyphicon-earphone"></i><?php echo $result['p_contact_number']; ?></p>
 					</div>
 						<div class="tips">
-						<h4>Safety Tips for Buyers</h4>
+							 <?php
+
+                      $query2 = "select * from sellar_tipes order by id desc";
+                      $post2 = $db->select($query2);
+                      if ($post2) {
+                           $result2= $post2 -> fetch_assoc();
+                        ?>
+						<h4><?php echo $result2[$lang.'_titile']; ?></h4>
 							<ol>
-								<li><a href="#">Contrary to popular belief.</a></li>
-								<li><a href="#">Contrary to popular belief.</a></li>
-								<li><a href="#">Contrary to popular belief.</a></li>
-								<li><a href="#">Contrary to popular belief.</a></li>
-								<li><a href="#">Contrary to popular belief.</a></li>
-								<li><a href="#">Contrary to popular belief.</a></li>
-								<li><a href="#">Contrary to popular belief.</a></li>
-								<li><a href="#">Contrary to popular belief.</a></li>
-								<li><a href="#">Contrary to popular belief.</a></li>
+								<?php echo $result2[$lang.'_dec']; ?>
 							</ol>
+							<?php } ?>
 						</div>
 				</div>
 			<div class="clearfix"></div>

@@ -61,8 +61,8 @@ $fm = new Formet();
 
 
  <div class="button">
-  <a href="http://www.smtecbd.com/" 
-  target="_blank">This site developed by SM Tec</a>
+  <!-- <a href="http://www.smtecbd.com/"  
+  target="_blank">This site developed by SM Tec</a>-->
  </div><!-- button -->
  </section><!-- content -->
 </div><!-- container -->

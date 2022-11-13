@@ -41,6 +41,8 @@
                                 <li><a href="view-fotter.php"><?php echo $language["View_Footer_about_section"]; ?></a> </li>
                                 <li><a href="add-contact-info.php"><?php echo $language["Add_contact_info"]; ?></a> </li>
                                 <li><a href="view-contact-info.php"><?php echo $language["View_contact_info"]; ?></a> </li>
+                                <li><a href="add-tips.php"><?php echo $language["Add_New_Tips"]; ?></a> </li>
+                                <li><a href="view-tips.php"><?php echo $language["View_Tips"]; ?></a> </li>
                                 
                             </ul>
                             

@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Nov 10, 2022 at 08:51 AM
+-- Generation Time: Nov 13, 2022 at 06:09 PM
 -- Server version: 10.4.21-MariaDB
 -- PHP Version: 8.0.11
 
@@ -55,12 +55,7 @@ CREATE TABLE `adds` (
 --
 
 INSERT INTO `adds` (`id`, `P_title`, `P_catagory`, `p_sub_catagory`, `p_decription`, `P_city`, `p_sate`, `p_price`, `p_condition`, `P_item_type`, `p_contact_number`, `P_imag1`, `P_imag2`, `P_imag3`, `P_imag4`, `time`, `city`, `county`, `zip_code`, `uni_id`) VALUES
-(14, 'product 1', 43050, 10, 'fsd fsf f sfsfsf s', '', '', '465465', 'old', 'sdfdf', '34234234234', '9c4d3e1c72.jpg', '9c4d3e1c72ead563d01bdf73bafb17d8.', '9c4d3e1c72ead563d01bdf73bafb17.', '9c4d3e1c72ead563d01b.', '2022-11-08 16:16:16', 'Dhaka', 'Bangladesh', '1620', '64b4c5bed2cc943f639c0e11dbfff14a'),
-(15, 'product 2', 94368, 11, 'twet wet twwte wtwt t t', '', '', '3252353', 'old', 'twt', '3423424', '592680977c.jpg', '592680977c38c6b59b211c4753660288.', '592680977c38c6b59b211c47536602.', '592680977c38c6b59b21.', '2022-11-08 16:17:21', 'Dhaka', 'Bangladesh', '1620', '64b4c5bed2cc943f639c0e11dbfff14a'),
-(16, 'p3', 43050, 10, 'sdfsdf', '', '', '324234', 'sdfdsdf', 'fdsfsdf', '325235253', 'bca6ec3978.jpg', 'bca6ec39784418157398b63702cf1ad9.', 'bca6ec39784418157398b63702cf1a.', 'bca6ec39784418157398.', '2022-11-08 16:26:33', 'Dhaka', 'Bangladesh', '1620', '64b4c5bed2cc943f639c0e11dbfff14a'),
-(17, 'p4', 94368, 11, '142124', '', '', '2141', 'sg', '14214', '234234234', '9b1ae92af8.jpg', '9b1ae92af8c3f58bcd843ed33cbd51d0.', '9b1ae92af8c3f58bcd843ed33cbd51.', '9b1ae92af8c3f58bcd84.', '2022-11-08 16:27:09', 'Dhaka', 'Bangladesh', '1620', '64b4c5bed2cc943f639c0e11dbfff14a'),
-(18, 'sgsgsdg', 43050, 10, 'sdgsg', '', '', '342342', 'dsfsd', 'gsdgd', '1231231', '9824b8a461.jpg', '9824b8a46150839f7206303882db4e51.', '9824b8a46150839f7206303882db4e.', '9824b8a46150839f7206.', '2022-11-08 16:27:41', 'Dhaka', 'Bangladesh', '1620', '64b4c5bed2cc943f639c0e11dbfff14a'),
-(19, 'asdasd', 94368, 11, 'dsasd', '', '', 'asdqee', 'sadad', 'asda', 'asdasd', '168e8b538a.jpg', '168e8b538a9b793ec3daecf65b57e93f.', '168e8b538a9b793ec3daecf65b57e9.', '168e8b538a9b793ec3da.', '2022-11-08 16:28:44', 'Dhaka', 'Bangladesh', '1620', '64b4c5bed2cc943f639c0e11dbfff14a');
+(20, 'Lorem Ipsum is simply dummy text of the printing and typesetting industry', 77798, 12, '<h4>Brand :&nbsp;Company name</h4>\r\n<p><strong>Display&nbsp;</strong>: 1.5 inch HD LCD Touch Screen</p>\r\n<p><strong>Summary</strong>&nbsp;: It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using \'Content here, content here\', making it look like readable English.</p>', '', '', '423423', 'Used', 'Mobile', '+8801982185584', '041f2d7a3b.jpg', '041f2d7a3bde421ce3a50a809de3396a.jpg', '041f2d7a3bde421ce3a50a809de339.jpg', '041f2d7a3bde421ce3a5.jpg', '2022-11-13 16:39:33', 'Dhaka', 'Bangladesh', '1620', 'cadc84c7921c956a6409fd348c01cc33');
 
 -- --------------------------------------------------------
 
@@ -109,9 +104,8 @@ CREATE TABLE `category` (
 --
 
 INSERT INTO `category` (`id`, `cat_id`, `en_title`, `de_title`, `icon`, `en_banner_title`, `de_banner_title`, `en_banner_dec`, `de_banner_dec`, `en_botton_text`, `de_botton_text`, `button_url`, `banner_img`) VALUES
-(8, 43050, 'cat 1', 'cat 1 g', 'c29e69ecaa.jpg', 'fwf', 'efwwef', 'fewfe', 'fewfef', 'fwef', 'fwewe', 'http://localhost/User%20markt/profile/post-ad.php', 'a617ae604d.jpg'),
-(9, 94368, 'cat 2', 'cat 2 g', '83a0fd6ccd.jpg', '', '', '', '', '', '', '', ''),
-(10, 60516, '', '', 'b8c141e114.', '', '', '', '', '', '', '', '');
+(8, 43050, 'Uncategorized', 'Geen categorie', 'categories.png', 'Sell or Advertise anything online', 'Verkoop of adverteer iets online', 'Sell or Advertise anything online', 'Verkoop of adverteer iets online', 'Post Free Ad', 'Gratis advertentie plaatsen', 'profile/post-ad.php', 'b266cf036a.jpg'),
+(11, 77798, ' Mobiles', 'mobiele telefoons', 'bfabd4eb43.png', 'Mobile Category banner', 'Mobiele categoriebanner', 'Mobile Category banner', 'Mobiele categoriebanner', 'Post Free Ad', 'Gratis advertentie plaatsen', 'profile/post-ad.php', '030c0e85fa.png');
 
 -- --------------------------------------------------------
 
@@ -134,7 +128,7 @@ CREATE TABLE `contact_info` (
 --
 
 INSERT INTO `contact_info` (`id`, `en_location`, `de_location`, `en_number`, `de_number`, `en_email`, `de_email`) VALUES
-(1, 'en_location', 'de_location', 'en_number', 'de_number', 'en_email', 'de_email');
+(3, 'Dhaka, Bangladesh', 'Dhaka, Bangladesh ', '01982185584', '01982185584', 'Sabbir@gmail.com', 'Sabbir@gmail.com');
 
 -- --------------------------------------------------------
 
@@ -173,13 +167,26 @@ CREATE TABLE `location` (
   `de_country` varchar(250) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
+-- --------------------------------------------------------
+
 --
--- Dumping data for table `location`
+-- Table structure for table `sellar_tipes`
 --
 
-INSERT INTO `location` (`id`, `en_city`, `de_city`, `en_zip_code`, `de_zip_code`, `en_country`, `de_country`) VALUES
-(1, 'Dhaka', 'Dhaka gar', '111', 'ggg', 'bd', 'gr'),
-(2, 'Norshingdi', 'Norshingdi g', '222', 'gm', 'india', 'india gar');
+CREATE TABLE `sellar_tipes` (
+  `id` int(11) NOT NULL,
+  `en_titile` varchar(250) NOT NULL,
+  `de_titile` varchar(250) NOT NULL,
+  `en_dec` text NOT NULL,
+  `de_dec` text NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `sellar_tipes`
+--
+
+INSERT INTO `sellar_tipes` (`id`, `en_titile`, `de_titile`, `en_dec`, `de_dec`) VALUES
+(2, 'Safety Tips for Buyers', 'Veiligheidstips voor kopers', '<p>Contrary to popular belief.<br />Contrary to popular belief.<br />Contrary to popular belief.<br />Contrary to popular belief.<br />Contrary to popular belief.<br />Contrary to popular belief.<br />Contrary to popular belief.<br />Contrary to popular belief.<br />Contrary to popular belief.</p>', '<p>In tegenstelling tot wat vaak wordt gedacht.<br />In tegenstelling tot wat vaak wordt gedacht.<br />In tegenstelling tot wat vaak wordt gedacht.<br />In tegenstelling tot wat vaak wordt gedacht.<br />In tegenstelling tot wat vaak wordt gedacht.<br />In tegenstelling tot wat vaak wordt gedacht.<br />In tegenstelling tot wat vaak wordt gedacht.<br />In tegenstelling tot wat vaak wordt gedacht.<br />In tegenstelling tot wat vaak wordt gedacht.</p>');
 
 -- --------------------------------------------------------
 
@@ -248,8 +255,8 @@ CREATE TABLE `sub_catagory` (
 --
 
 INSERT INTO `sub_catagory` (`id`, `parent_cat`, `en_name`, `de_name`) VALUES
-(10, 43050, 'sub 1', 'sub 1 g'),
-(11, 94368, 'sub 2', 'sub 2 g');
+(12, 77798, 'Mobile Phones', 'Mobieltjes'),
+(13, 77798, 'Tablets', 'Tabletten');
 
 -- --------------------------------------------------------
 
@@ -274,7 +281,7 @@ CREATE TABLE `users` (
 --
 
 INSERT INTO `users` (`id`, `name`, `password`, `uni_id`, `email`, `time`, `city`, `county`, `zip_code`) VALUES
-(6, 'sabbir', 'a', '64b4c5bed2cc943f639c0e11dbfff14a', 'a@a.a', '2022-11-03 05:52:57', 'Dhaka', 'Bangladesh', '1620');
+(8, 'sabbir', 'adsad2132Ssd', 'cadc84c7921c956a6409fd348c01cc33', 'sabbir@gmail.com', '2022-11-13 16:10:46', 'Dhaka', 'Bangladesh', '1620');
 
 --
 -- Indexes for dumped tables
@@ -317,6 +324,12 @@ ALTER TABLE `location`
   ADD PRIMARY KEY (`id`);
 
 --
+-- Indexes for table `sellar_tipes`
+--
+ALTER TABLE `sellar_tipes`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- Indexes for table `seo`
 --
 ALTER TABLE `seo`
@@ -354,25 +367,25 @@ ALTER TABLE `users`
 -- AUTO_INCREMENT for table `adds`
 --
 ALTER TABLE `adds`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=20;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=21;
 
 --
 -- AUTO_INCREMENT for table `admin`
 --
 ALTER TABLE `admin`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT for table `category`
 --
 ALTER TABLE `category`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
 
 --
 -- AUTO_INCREMENT for table `contact_info`
 --
 ALTER TABLE `contact_info`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- AUTO_INCREMENT for table `footer`
@@ -385,6 +398,12 @@ ALTER TABLE `footer`
 --
 ALTER TABLE `location`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+
+--
+-- AUTO_INCREMENT for table `sellar_tipes`
+--
+ALTER TABLE `sellar_tipes`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT for table `seo`
@@ -408,13 +427,13 @@ ALTER TABLE `social_midea`
 -- AUTO_INCREMENT for table `sub_catagory`
 --
 ALTER TABLE `sub_catagory`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
 
 --
 -- AUTO_INCREMENT for table `users`
 --
 ALTER TABLE `users`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

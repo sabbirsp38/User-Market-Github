@@ -17,23 +17,23 @@
             <?php } ?>
             </div>
             <div class="col-md-3 footer-grid">
-              <h4 class="footer-head">Help</h4>
+              <h4 class="footer-head"><?php echo $language["Help"]; ?></h4>
               <ul>
-                <li><a href="faq.php">Faq</a></li>
-                <li><a href="contact.php">Contact</a></li>
+                <li><a href="faq.php"><?php echo $language["Faq"]; ?></a></li>
+                <li><a href="contact.php"><?php echo $language["Contact"]; ?></a></li>
               </ul>
             </div>
             <div class="col-md-3 footer-grid">
-              <h4 class="footer-head">Information</h4>
+              <h4 class="footer-head"><?php echo $language["Information"]; ?></h4>
               <ul>
 
-                <li><a href="terms.php">Terms of Use</a></li>
-                <li><a href="privacy.php">Privacy Policy</a></li>  
+                <li><a href="terms.php"><?php echo $language["Terms_of_Use"]; ?></a></li>
+                <li><a href="privacy.php"><?php echo $language["Privacy_Policy"]; ?></a></li>  
               </ul>
             </div>
             <div class="col-md-3 footer-grid">
-              <h4 class="footer-head">Contact Us</h4>
-              <span class="hq">Our headquarters</span>
+              <h4 class="footer-head"><?php echo $language["Contact_Us"]; ?></h4>
+              <span class="hq"><?php echo $language["Our_headquarters"]; ?></span>
               <address>
                 <ul class="location">
                   <?php
@@ -69,7 +69,7 @@
         <div class="footer-logo">
           <a href="index.php"><span>User</span>Markt</a>
         </div>
-        <div class="footer-social-icons">
+        <!-- <div class="footer-social-icons">
           <ul>
             <li><a class="facebook" href="#"><span>Facebook</span></a></li>
             <li><a class="twitter" href="#"><span>Twitter</span></a></li>
@@ -77,9 +77,9 @@
             
             
           </ul>
-        </div>
+        </div> -->
         <div class="copyrights">
-          <p>User Markt All Rights Reserved © <?php  print(date("Y")) ?> . </p>
+          <p><?php echo $language["All_Rights_Reserved"]; ?> © <?php  print(date("Y")) ?> . </p>
         </div>
         <div class="clearfix"></div>
       </div>

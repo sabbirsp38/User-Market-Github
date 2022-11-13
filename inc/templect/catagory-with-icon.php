@@ -1,7 +1,7 @@
 <div class="categories">
 				<div class="container">
 					 <?php
-                          $query = "select * from category";
+                          $query = "select * from category order by id desc limit 12";
                           $post = $db->select($query);
                           if ($post) {
                             while ($result= $post -> fetch_assoc()) {

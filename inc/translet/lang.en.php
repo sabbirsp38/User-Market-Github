@@ -150,7 +150,7 @@ $language['Sub_Category'] = 'Sub Category';
 $language['Select_Sub_Category'] = 'Select Sub Category';
 $language['Price'] = 'Price';
 $language['Condition'] = 'Condition';
-$language['Item_Type'] = 'Item_Type';
+$language['Item_Type'] = 'Item Type';
 $language['Ad_Description'] = 'Ad_Description';
 $language['Photos_For_Your_Ad'] = 'Photos For Your Ad';
 $language['2nd_Photos_For_Your_Ad_Optional'] = '2nd Photos For Your Ad Optional';
@@ -192,6 +192,25 @@ $language['Post'] = 'Post';
  $language["View_snipet_code"]= 'View snipet code';
  $language["snipet_code"]= 'Snipet code';
  $language["Add_snipet_code"]= 'Add snipet code';
+ $language["Add_New_Tips"]= 'Add New Tips';
+ $language["View_Tips"]= 'View Tips';
+ $language["Title_in_english"]= 'Title in english';
+ $language["Title_in_German"]= 'Title  in German';
+ $language["Description_in_english"]= 'Description  in english
+';
+ $language["Description_in_German"]= 'Description  in German';
+ $language["post"]= 'post';
+ $language["One_or_more_field_has_empty"]= 'One or more field has empty';
+
+  $language["Your_password_not_match"]= 'Your password not match !';
+   $language["You_already_have_an_account"]= 'You already have an account !';
+
+
+  
+
+
+
+
 
 
 

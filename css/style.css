@@ -54,9 +54,10 @@ label{
 }
 .main-banner {
 	
-	background-size:cover;
+	background-size:cover !important;
 	min-height:400px;
 	padding:100px 0 0 0;
+
 }
 .banner h1 {
 	color:#fff;
@@ -71,7 +72,7 @@ label{
 	text-decoration: none;
     color: #fff;
     font-size: 17px;
-    background-color: #f3c500;
+    background-color: #FF00BF;
     padding: 10px 20px;
 }
 .banner a:hover {
@@ -186,11 +187,16 @@ li.dropdown-header {
     margin: 100px auto;
 }
 .header {
-    padding: 0px 0;
-    background-color: #FDFDFD;
+    padding: 1px 0;
+    background-color: #00bfff40;
 }
 .logo {
     float: left;
+}
+.logoimg {
+    padding-top: 20px;
+    height: 120px;
+    padding-bottom: 20px;
 }
 .header-right{
 	float:right;
@@ -206,15 +212,15 @@ li.dropdown-header {
 }
 a.account {
     float: left;
-    margin-top: 20px;
-    font-size: 15px;
+    margin-top: 40px;
+    font-size: 18px;
     color: #fff;
-    background-color: #01a185;
+    background-color: #FF00BF;
     padding: 6px 20px;
     text-decoration: none;
 }
 a.account:hover {
-	background-color: #f3c500;
+	background-color: #FE9A2E;
 }
 span.active.uls-trigger {
     float: left;
@@ -285,6 +291,7 @@ border:1px solid #e7eaed;
 	-ms-transition:0.5s all;
 }
 .focus-layout{
+	background-color: #ffffff;
 	margin: 5px;
     padding: 20px 0;
     transition: 0.5s all;
@@ -295,7 +302,7 @@ border:1px solid #e7eaed;
 	text-align: center;
 }
 .focus-layout:hover {
-    background-color: #01a185;
+    background-color: red;
     transition:0.5s all;
 	-webkit-transition:0.5s all;
 	-moz-transition:0.5s all;
@@ -317,6 +324,7 @@ border:1px solid #e7eaed;
     margin-top: 5em;
 }
 .focus-image{
+
   text-align: center;
   transition:0.5s all;
 	-webkit-transition:0.5s all;
@@ -970,8 +978,13 @@ span.price:after {
 /*-- //mobile-app--*/
 
 /*-- footer --*/
+footer{
+	background-image: linear-gradient(to top, #00bfffab, #fff);
+}
 .footer {
     margin: 60px 0;
+    
+
 }
 .footer-top {
     padding: 60px 0;
@@ -982,7 +995,7 @@ span.price:after {
     font-size: 14px;
 }
 .footer-bottom {
-    background: #3c3d41;
+    
     padding: 30px 0;
 }
 h4.footer-head {
@@ -991,7 +1004,7 @@ h4.footer-head {
     margin-bottom: 16px;
 }
 .footer-grid p {
-    color: #979797;
+    color: #000000;
     font-size: 13px;
     line-height: 26px;
     margin-top: 15px;
@@ -1001,12 +1014,12 @@ h4.footer-head {
     margin: 13px 0;
 }
 .footer-grid ul li a {
-    color: #979797;
+    color: #000000;
     font-size: 13px;
     font-weight: 400;
 }
 span.hq {
-    color: rgba(89, 194, 175, 0.79);
+    color: #FF00BF;
     font-size: 1em;
     margin-bottom: 1em;
     display: block;
@@ -1043,14 +1056,14 @@ span.glyphicon.glyphicon-map-marker, span.glyphicon.glyphicon-earphone, .glyphic
 ul.location li:nth-child(2) {
     float: right;
     width: 85%;
-    color: #979797;
+    color: #000000;
     font-size: 0.95em;
     line-height: 2em;
     text-transform: lowercase;
     margin: 0;
 }
 .copyrights p,.diff p {
-    color: #979797;
+    color: black;
     font-size: 14px;
 	margin-top:0;
 }
@@ -1142,11 +1155,11 @@ ul.location li:nth-child(2) {
 .footer-logo a {
     font-family: 'Ubuntu Condensed', sans-serif;
     font-size: 40px;
-    color: #01a185;
+    color: #FE9A2E;
     text-decoration: none;
 }
 .footer-logo a span {
-    color: #f3c500;
+    color: #FF00BF;
 }
 .footer-logo a {
 	position:relative;
@@ -1157,18 +1170,18 @@ ul.location li:nth-child(2) {
     position: absolute;
     top: 50%;
     left: 0;
-    width: 44%;
+    width: 40%;
     height: 1px;
-    background: #545556;
+    background: #000000;
 }
 .footer-logo a:after {
     content: "";
     position: absolute;
     top: 50%;
     right: 0;
-    width: 44%;
+    width: 40%;
     height: 1px;
-    background: #545556;
+    background: #000000;
 }
 /*-- //footer --*/
 
@@ -4801,20 +4814,31 @@ label {
     float: left;
 }
 .lang-dropdown {
-    margin-top: 20px;
+    margin-top: 40px;
     margin-left: 5px;
-    background: red;
-}
 
+}
+button#dropdownMenuButton {
+    font-size: 17px;
+    color: white;
+    background: #FE9A2E;
+}
+#dropdownMenuButton:hover{
+	background: #FF00BF;
+}
 .dropdown-item{
 	text-align: center;
 }
 
 .caticon {
+	color: red;
     width: 100px;
-    background: white;
+    background: red;
     padding: 10px;
     border-radius: 10px;
+}
+.focus-border:hover .caticon{
+	 background: white;
 }
 
 .padding-top-70{
@@ -4838,4 +4862,28 @@ label {
     border: none;
     padding: 0;
     margin-top: 0;
+}
+
+@media only screen and (max-width: 600px) {
+  .lang-dropdown {
+    margin-top: 10px;
+    margin-left: 5px;
+}
+a.account {
+    float: left;
+    margin-top: 34px;
+    font-size: 18px;
+    color: #fff;
+    background-color: #FF00BF;
+    padding: 6px 25px;
+    text-decoration: none;
+    margin-left: 5px;
+}
+.footer-logo a:before {
+    width: 25%;
+}
+.footer-logo a:after {
+    width: 25%;
+    
+}
 }

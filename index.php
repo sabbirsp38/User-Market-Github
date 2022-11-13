@@ -36,7 +36,7 @@ LIMIT 4;";
 									<div class="col-md-3 biseller-column">
 										<a href="single.php? $id=<?php echo $result['id']; ?>">
 											<img src="uploads/<?php echo $result['P_imag1']; ?>"/>
-											<span class="price">&#36; <?php echo $result['p_price']; ?></span>
+											<span class="price">€ <?php echo $result['p_price']; ?></span>
 										</a> 
 										<div class="ad-info">
 											<h5><?php echo $result['P_title']; ?></h5>

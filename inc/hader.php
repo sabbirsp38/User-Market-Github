@@ -140,7 +140,7 @@ var elem=$('#container ul');
   <div class="header">
     <div class="container">
       <div class="logo">
-        <a href="index.php"><span>User</span>Markt</a>
+        <a href="index.php"><img class="logoimg" src="images/Logo.png"></a>
       </div>
       <div class="header-right">
         <ul class="hader-list-itam">
