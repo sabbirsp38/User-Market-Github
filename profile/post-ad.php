@@ -87,7 +87,7 @@
 
 
                     <label> <?php echo $language["Price"]; ?><span></span></label>
-                    <input name="p_price" type="text" class="phone" placeholder="">
+                    <input name="p_price" type="text" placeholder="">
                     <div class="clearfix"></div>
 
                     <label><?php echo $language["Condition"]; ?> <span></span></label>
@@ -145,7 +145,7 @@
                         <input name="p_contact_number" type="text" class="phone" placeholder="">
                         <div class="clearfix"></div>
                     
-                        <p class="post-terms"> <?php echo $language["By_clicking"]; ?><strong> <?php echo $language["post"]; ?> Button</strong>  <?php echo $language["you_accept_our"]; ?><a href="terms.php" target="_blank"> <?php echo $language["Terms_of_Use"]; ?></a>  <?php echo $language["and"]; ?><a href="privacy.php" target="_blank"><?php echo $language["Privacy_Policy"]; ?></a></p>
+                        <p class="post-terms"> <?php echo $language["By_clicking"]; ?><strong> <?php echo $language["post_Button"]; ?></strong>  <?php echo $language["you_accept_our"]; ?><a href="terms.php" target="_blank"> <?php echo $language["Terms_of_Use"]; ?></a>  <?php echo $language["and"]; ?><a href="privacy.php" target="_blank"><?php echo $language["Privacy_Policy"]; ?></a></p>
                     <input type="submit" value="<?php echo $language["Post"]; ?>">                  
                     <div class="clearfix"></div>
 

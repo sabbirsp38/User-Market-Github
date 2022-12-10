@@ -37,8 +37,7 @@
                             <ul class="submenu">
                                 <li><a href="add-banner.php"><?php echo $language["Add_Banner"]; ?></a> </li>
                                 <li><a href="view-banner.php"><?php echo $language["Banner_List"]; ?></a> </li>
-                                <li><a href="add-fotter.php"><?php echo $language["Add_Footer_about_section"]; ?></a> </li>
-                                <li><a href="view-fotter.php"><?php echo $language["View_Footer_about_section"]; ?></a> </li>
+                               
                                 <li><a href="add-contact-info.php"><?php echo $language["Add_contact_info"]; ?></a> </li>
                                 <li><a href="view-contact-info.php"><?php echo $language["View_contact_info"]; ?></a> </li>
                                 <li><a href="add-tips.php"><?php echo $language["Add_New_Tips"]; ?></a> </li>
@@ -46,6 +45,21 @@
                                 
                             </ul>
                             
+                        </li>
+                        <li><a class="menuitem"><?php echo $language["footer_setting"]; ?></a>
+                            <ul class="submenu">
+                                 <li><a href="add-fotter.php"><?php echo $language["Add_Footer_about_section"]; ?></a> </li>
+                                <li><a href="view-fotter.php"><?php echo $language["View_Footer_about_section"]; ?></a> </li>
+
+                                <li><a href="add-fotter2.php"><?php echo $language["Add_Footer_section_two"]; ?></a> </li>
+                                <li><a href="view-fotter2.php"><?php echo $language["View_Footer_section_two"]; ?></a> </li>
+
+                                <li><a href="add-fotter3.php"><?php echo $language["Add_Footer_section_three"]; ?></a> </li>
+                                <li><a href="view-fotter3.php"><?php echo $language["View_Footer_section_three"]; ?></a> </li>
+
+
+                            </ul>
+                        
                         </li>
                         <li><a class="menuitem"><?php echo $language["SEO_Settings"]; ?></a>
                             <ul class="submenu">

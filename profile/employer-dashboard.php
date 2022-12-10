@@ -1,4 +1,5 @@
 <?php include 'inc/hader.php';
+require_once ("../inc/templect/baner.php");
 
 $uni_id = $_SESSION['uni_id'];
 $ii=0;

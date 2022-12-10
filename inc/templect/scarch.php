@@ -2,23 +2,7 @@
 
 			<div class="select-box">
 				<form action="search.php"  method="get">
-				<div class="select-city-for-local-ads ads-list">
-					<label><?php echo $language["Select_your_city_to_see_local_ads"]; ?></label>
-						<select name="search_location">
-							<option  value=""><?php echo $language["Entire_Location"]; ?></option>
-							 <?php
-                          $query = "select * from location";
-                          $post = $db->select($query);
-                          if ($post) {
-                            while ($result= $post -> fetch_assoc()) {
-                            ?>
-												
-													
-							<option value="<?php echo $result[$lang.'_city']; ?>"><?php echo $result[$lang.'_city']; ?></option>
-
-								<?php }} ?>			
-			            </select>
-				</div>
+			
 				<div class="browse-category ads-list">
 					<label><?php echo $language["Browse_Categories"]; ?></label>
 					<select name="search_cat" class="selectpicker show-tick" data-live-search="true">

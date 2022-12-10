@@ -21,7 +21,7 @@
 				<div class="container">
 				<!-- slider -->
 				<div class="trend-ads">
-					<h2><?php echo $language["Trending_Ads"]; ?> </h2>
+					<h2><?php echo $language["Best_Seller"]; ?> </h2>
 							<ul id="flexiselDemo3">
 								<li>
 

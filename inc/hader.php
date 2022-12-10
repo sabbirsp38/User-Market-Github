@@ -3,7 +3,7 @@
 <?php include 'helpers/Formet.php'; ?>
 <?php
 // include language configuration file based on selected language
-$lang = "en";
+$lang = "de";
 if (isset($_GET['lang'])) {
     $lang = $_GET['lang'];
 }
@@ -145,24 +145,12 @@ var elem=$('#container ul');
       <div class="header-right">
         <ul class="hader-list-itam">
           <li>
-            <a class="account" href="profile/index.php"><?php echo $language["My_Account"]; ?></a>
+            <a class="account" href="profile/index.php"><?php echo $language["LoginRegistration"]; ?></a>
           </li>
           <li>
+            <a class="laguageh" href="?lang=en">English</a>
 
-            <div class="dropdown lang-dropdown">
-              <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                <?php echo $language["Select_language"]; ?>
-              </button>
-              <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                <a class="dropdown-item" href="?lang=en"
-            <?php if($lang == 'en'){?> style="color: #ff9900;"
-            <?php } ?>>English</a><br>
-               
-                <a class="dropdown-item"
-            href="?lang=de" <?php if($lang == 'de'){?>
-            style="color: #ff9900;" <?php } ?>>Duits</a>
-              </div>
-            </div>
+            
 
 
           </li>

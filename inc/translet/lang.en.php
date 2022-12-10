@@ -204,6 +204,22 @@ $language['Post'] = 'Post';
 
   $language["Your_password_not_match"]= 'Your password not match !';
    $language["You_already_have_an_account"]= 'You already have an account !';
+   $language["LoginRegistration"]= 'Login | Registration';
+   $language["Best_Seller"]= 'BestSeller';
+   $language["Footer_section_two_title_in_english"]= 'Footer section two title in english';
+   $language["Footer_section_two_title_in_German"]= 'Footer section two title in German';
+   $language["Footer_section_two_Description_in_english"]= 'Footer section two Description in english';
+   $language["Footer_section_two_Description_in_German"]= 'Footer section two Description in German';
+   $language["Footer_section_three_title_in_english"]= 'Footer section three title in english';
+   $language["Footer_section_three_title_in_German"]= 'Footer section three title in German';
+   $language["Footer_section_three_Description_in_english"]= 'Footer section three Description in english';
+   $language["Footer_section_three_Description_in_German"]= 'Footer section three Description in German';
+   $language["footer_setting"]= 'footer setting';
+   $language["Add_Footer_section_two"]= 'Add Footer section two';
+   $language["View_Footer_section_two"]= 'View Footer section two';
+   $language["Add_Footer_section_three"]= 'Add Footer section three';
+   $language["View_Footer_section_three"]= 'View Footer section three';
+
 
 
   

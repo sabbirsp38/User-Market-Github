@@ -29,7 +29,7 @@ $con = new mysqli('localhost', 'root', '', 'usermarket');
  
 
  // include language configuration file based on selected language
-$lang = "en";
+$lang = "de";
 if (isset($_GET['lang'])) {
     $lang = $_GET['lang'];
 }
@@ -199,9 +199,7 @@ var elem=$('#container ul');
       </div>
       <div class="header-right">
         <ul class="hader-list-itam">
-          <li>
-            <a class="account" href="index.php">My Account</a>
-          </li>
+          
           
 
           <?php 
@@ -209,28 +207,15 @@ if (isset($_GET['action']) && $_GET['action']=="logout" ) {
     Session::destroy();
   }
  ?>
-                      <li><a class="btn btn-secondary logout-but account" href="post-ad.php">Post Ads</a></li>
-                      <li><a class="btn btn-secondary logout-but account" href="?action=logout"><span class="ti-power-off"></span>Log Out</a></li>
+                      <li><a class="btn btn-secondary logout-but account" href="post-ad.php"><?php echo $language["Post_Ads"]; ?></a></li>
+                      <li><a class="btn btn-secondary logout-but account" href="?action=logout"><span class="ti-power-off"></span><?php echo $language["Logout"]; ?></a></li>
 
                       <li>
 
-            <div class="dropdown lang-dropdown">
-              <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                Select language
-              </button>
-              <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                <a class="dropdown-item" href="?lang=en"
-            <?php if($lang == 'en'){?> style="color: #ff9900;"
-            <?php } ?>>English</a><br>
-               
-                <a class="dropdown-item"
-            href="?lang=de" <?php if($lang == 'de'){?>
-            style="color: #ff9900;" <?php } ?>>Deutsche</a>
-              </div>
-            </div>
+                        <a class="laguageh" href="?lang=en">English</a>
 
 
-          </li>
+                       </li>
         </ul>
       
 

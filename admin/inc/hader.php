@@ -14,7 +14,7 @@ $fm = new Formet();
 
 
  // include language configuration file based on selected language
-$lang = "en";
+$lang = "de";
 if (isset($_GET['lang'])) {
     $lang = $_GET['lang'];
 }
@@ -110,10 +110,6 @@ require_once ("../inc/translet/lang." . $lang . ".php");
                     <?php if($lang == 'en'){?> style="color: #ff9900;"
                     <?php } ?>>English</a>
                 </li>
-                <li class="ic-grid-tables">
-                     <a 
-                        href="?lang=de" <?php if($lang == 'de'){?>
-                        style="color: #ff9900;" <?php } ?>>Duits</a>
-                </li>
+                
             </ul>
         </div>

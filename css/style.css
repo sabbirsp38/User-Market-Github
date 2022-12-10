@@ -188,7 +188,7 @@ li.dropdown-header {
 }
 .header {
     padding: 1px 0;
-    background-color: #00bfff40;
+   
 }
 .logo {
     float: left;
@@ -214,8 +214,17 @@ a.account {
     float: left;
     margin-top: 40px;
     font-size: 18px;
-    color: #fff;
-    background-color: #FF00BF;
+    color: black;
+/*    background-color: #01a185;*/
+    padding: 6px 20px;
+    text-decoration: none;
+}
+a.laguageh {
+    float: left;
+    margin-top: 40px;
+    font-size: 18px;
+    color: black;
+   
     padding: 6px 20px;
     text-decoration: none;
 }
@@ -302,7 +311,7 @@ border:1px solid #e7eaed;
 	text-align: center;
 }
 .focus-layout:hover {
-    background-color: red;
+    background-color: #01a185;
     transition:0.5s all;
 	-webkit-transition:0.5s all;
 	-moz-transition:0.5s all;
@@ -978,33 +987,53 @@ span.price:after {
 /*-- //mobile-app--*/
 
 /*-- footer --*/
-footer{
-	background-image: linear-gradient(to top, #00bfffab, #fff);
+
+
+.fotter_inner_new{
+	padding-top: 50px;
+	padding-bottom: 50px;
 }
+
+img.fotter_logo {
+    margin-top: -13px;
+}
+
+
+
+
+
+
+
 .footer {
     margin: 60px 0;
     
 
 }
 .footer-top {
-    padding: 60px 0;
+	padding: 60px 0;
+    border-top: 3px solid #F4F4F4;
+    
+
 }
 .footer-bottom p {
     margin: 20px 0 0 0;
     color: #fff;
     font-size: 14px;
+
 }
+
+
 .footer-bottom {
-    
+   background: #3c3d41; 
     padding: 30px 0;
 }
 h4.footer-head {
     font-size: 28px;
-    color: #01a185;
+    color: white;
     margin-bottom: 16px;
 }
 .footer-grid p {
-    color: #000000;
+    color: white;
     font-size: 13px;
     line-height: 26px;
     margin-top: 15px;
@@ -1014,7 +1043,7 @@ h4.footer-head {
     margin: 13px 0;
 }
 .footer-grid ul li a {
-    color: #000000;
+    color: white;
     font-size: 13px;
     font-weight: 400;
 }
@@ -1063,7 +1092,7 @@ ul.location li:nth-child(2) {
     margin: 0;
 }
 .copyrights p,.diff p {
-    color: black;
+    color: white;
     font-size: 14px;
 	margin-top:0;
 }
@@ -1172,7 +1201,7 @@ ul.location li:nth-child(2) {
     left: 0;
     width: 40%;
     height: 1px;
-    background: #000000;
+    background: silver;
 }
 .footer-logo a:after {
     content: "";
@@ -1181,7 +1210,7 @@ ul.location li:nth-child(2) {
     right: 0;
     width: 40%;
     height: 1px;
-    background: #000000;
+    background: silver;
 }
 /*-- //footer --*/
 
@@ -1239,9 +1268,13 @@ span.total strong {
     border-bottom: 1px solid #eee;
 }
 .category-img {
-	float:left;
-	width:25%;
-	text-align: center;
+    float: left;
+    width: 25%;
+    text-align: center;
+    background: #01a185;
+    padding: 30px;
+    margin-right: 10px;
+    border-radius: 5px;
 }
 .category-img img {
 	width:75%;
@@ -3410,6 +3443,7 @@ label {
 	}
 	.footer-top {
 		padding: 50px 0;
+		border-top: 3px solid #F4F4F4;
 	}
 	.mobile-app {
 		padding-top: 70px;
@@ -4831,15 +4865,52 @@ button#dropdownMenuButton {
 }
 
 .caticon {
-	color: red;
     width: 100px;
-    background: red;
-    padding: 10px;
-    border-radius: 10px;
+    height: 100px;
+    padding: 20px;
+    border-radius: 50%;
 }
 .focus-border:hover .caticon{
 	 background: white;
 }
+.focus-grid:nth-child(1) .caticon{
+  background: #dd0908;
+}
+
+.focus-grid:nth-child(2) .caticon{
+  background: #ff9e29;
+}
+.focus-grid:nth-child(3) .caticon{
+  background: #3fb7d2;
+}
+.focus-grid:nth-child(4) .caticon{
+  background: #15c01c;
+}
+.focus-grid:nth-child(5) .caticon{
+  background: #1963ce;
+}
+.focus-grid:nth-child(6) .caticon{
+  background: #c119ce;
+}
+.focus-grid:nth-child(7) .caticon{
+  background: #df8012;
+}
+.focus-grid:nth-child(8) .caticon{
+  background: #070c1f;
+}
+.focus-grid:nth-child(9) .caticon{
+  background: #7e3b07;
+}
+.focus-grid:nth-child(10) .caticon{
+  background: #1ca39d;
+}
+.focus-grid:nth-child(11) .caticon{
+  background: #7fbad8;
+}
+.focus-grid:nth-child(12) .caticon{
+  background: #f49ecf;
+}
+
 
 .padding-top-70{
 	padding-top: 70px;
@@ -4887,3 +4958,6 @@ a.account {
     
 }
 }
+
+
+
